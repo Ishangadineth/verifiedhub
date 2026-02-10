@@ -534,6 +534,24 @@ export default function Home() {
                 </div>
             </nav>
 
+            {/* Banner Ad 728x90 - Top Leaderboard */}
+            <div className="ad-container-top" style={{ padding: '1rem 0', display: 'flex', justifyContent: 'center', background: 'rgba(0,0,0,0.2)' }}>
+                <div id="ad-target-728x90">
+                    <Script id="ad-options-728x90" strategy="afterInteractive">
+                        {`
+                            atOptions = {
+                                'key' : '0255561aa84d3f6ffea292e3c7a0ccd5',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                            };
+                        `}
+                    </Script>
+                    <Script src="https://www.highperformanceformat.com/0255561aa84d3f6ffea292e3c7a0ccd5/invoke.js" strategy="afterInteractive" />
+                </div>
+            </div>
+
             {!isMenuOpen && (
                 <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn">
                     <Globe size={20} /> {lang.toUpperCase()}
@@ -587,14 +605,32 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="ad-section-native" style={{ padding: '2rem 10%', display: 'flex', justifyContent: 'center' }}>
-                    <Script
-                        async="async"
-                        data-cfasync="false"
-                        src="https://pl28691373.effectivegatecpm.com/735e7acf03202f43e88a6f22df2ec71e/invoke.js"
-                        strategy="afterInteractive"
-                    />
-                    <div id="container-735e7acf03202f43e88a6f22df2ec71e" style={{ width: '100%', minHeight: '250px' }}></div>
+                <section className="ad-section-rectangle" style={{ padding: '2rem 10%', display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+                    {/* Banner Ad 300x250 - Rectangle */}
+                    <div id="ad-target-300x250">
+                        <Script id="ad-options-300x250" strategy="afterInteractive">
+                            {`
+                                atOptions = {
+                                    'key' : 'cee892590aa631fba73ab14a131d9973',
+                                    'format' : 'iframe',
+                                    'height' : 250,
+                                    'width' : 300,
+                                    'params' : {}
+                                };
+                            `}
+                        </Script>
+                        <Script src="https://www.highperformanceformat.com/cee892590aa631fba73ab14a131d9973/invoke.js" strategy="afterInteractive" />
+                    </div>
+
+                    <div className="native-ad-wrapper" style={{ flex: '1', minWidth: '300px' }}>
+                        <Script
+                            async="async"
+                            data-cfasync="false"
+                            src="https://pl28691373.effectivegatecpm.com/735e7acf03202f43e88a6f22df2ec71e/invoke.js"
+                            strategy="afterInteractive"
+                        />
+                        <div id="container-735e7acf03202f43e88a6f22df2ec71e" style={{ width: '100%', minHeight: '250px' }}></div>
+                    </div>
                 </section>
 
                 <section id="malware" className="features" style={{ background: 'rgba(0, 242, 254, 0.03)' }}>
@@ -639,6 +675,24 @@ export default function Home() {
                             </p>
                             <span className="read-more-link" style={{ marginTop: "2rem", display: "block" }}>{t.nav.readMore}</span>
                         </div>
+                    </div>
+                </section>
+
+                {/* Banner Ad 320x50 - Mobile sticky/bottom */}
+                <section className="ad-section-mobile" style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center' }}>
+                    <div id="ad-target-320x50">
+                        <Script id="ad-options-320x50" strategy="afterInteractive">
+                            {`
+                                atOptions = {
+                                    'key' : 'f2e63fbc08b4c3d0d87309cb1885d7da',
+                                    'format' : 'iframe',
+                                    'height' : 50,
+                                    'width' : 320,
+                                    'params' : {}
+                                };
+                            `}
+                        </Script>
+                        <Script src="https://www.highperformanceformat.com/f2e63fbc08b4c3d0d87309cb1885d7da/invoke.js" strategy="afterInteractive" />
                     </div>
                 </section>
             </main>
