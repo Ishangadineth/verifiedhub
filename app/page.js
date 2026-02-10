@@ -649,6 +649,19 @@ export default function Home() {
                 <p className="copyright" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>&copy; 2026 {t.footer.copyright}</p>
             </footer>
 
+            <button
+                className="whatsapp-float-btn fade-in"
+                onClick={() => {
+                    const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
+                    window.location.href = `whatsapp://send?text=${text}`;
+                }}
+                title="Share on WhatsApp"
+            >
+                <div className="whatsapp-icon-inner">
+                    <MessageCircle size={32} fill="white" />
+                </div>
+            </button>
+
             <style jsx>{`
         .mobile-toggle { display: none; cursor: pointer; color: white; }
         .institution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
