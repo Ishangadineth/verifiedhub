@@ -46,6 +46,7 @@ const translations = {
             step4: "සෑම පියවරක්ම සාර්ථකයි! ඔබගේ 15GB පැකේජය දැන් ලබාගන්න",
             btnShare: "WhatsApp හරහා Share කරන්න",
             btnClaim: "15GB සක්‍රීය කරන්න",
+            errorNum: "කරුණාකර නිවැරදි දුරකථන අංකයක් ඇතුළත් කරන්න",
             shockTitle: "නතර වන්න! (STOP!)",
             shockMsg: "ඔබ දැන් සිදු කළේ සැබෑ වංචාවකදී සිදුවන ක්‍රියාවලියමයි. මෙලෙස Share කිරීම හරහා ඔබ ඔබගේ මිතුරන්වද මෙවැනි අනතුරු වලට නිරාවරණය කරනවා. මින් බේරෙන්න පහත තොරතුරු හොඳින් කියවන්න.",
             redirecting: "අත්‍යවශ්‍ය තොරතුරු වෙත යොමු කෙරේ..."
@@ -135,6 +136,7 @@ const translations = {
             step4: "All steps complete! Click below to claim your 15GB",
             btnShare: "Share on WhatsApp",
             btnClaim: "Get 15GB Data Now",
+            errorNum: "Please enter a valid phone number",
             shockTitle: "STOP! Access Denied",
             shockMsg: "You just experienced exactly how a real digital scam works. By sharing this, you might have compromised your friends' safety too. Read below to learn how to keep yourself protected.",
             redirecting: "Redirecting to safety information..."
@@ -224,6 +226,7 @@ const translations = {
             step4: "அனைத்து படிநிலைகளும் முடிந்தது! இப்போது உங்கள் 15GB ஐப் பெற்றுக்கொள்ளுங்கள்",
             btnShare: "WhatsApp இல் பகிரவும்",
             btnClaim: "15GB ஐச் செயல்படுத்தவும்",
+            errorNum: "தயவுசெய்து சரியான தொலைபேசி எண்ணை உள்ளிடவும்",
             shockTitle: "நில்லுங்கள்! (STOP!)",
             shockMsg: "ஒரு உண்மையான இணைய மோசடியில் நடக்கும் அதே செயல்முறையைத்தான் நீங்கள் இப்போது செய்தீர்கள். இவ்வாறு பகிரும் மூலம் உங்கள் நண்பர்களையும் நீங்கள் ஆபத்தில் தள்ளுகிறீர்கள். இதிலிருந்து தப்பிக்க கீழுள்ள தகவல்களைத் தெளிவாக வாசிக்கவும்.",
             redirecting: "முக்கிய தகவல்களுக்கு அழைத்துச் செல்லப்படுகிறது..."
@@ -311,6 +314,7 @@ export default function Home() {
     const [progress, setProgress] = useState(0);
     const [showShock, setShowShock] = useState(false);
     const [phone, setPhone] = useState("");
+    const [simError, setSimError] = useState(false);
 
     const heroCardRef = useRef(null);
 
@@ -331,7 +335,13 @@ export default function Home() {
     };
 
     const handleSimNext = () => {
-        if (phone.length >= 9) setSimStep(1);
+        if (phone.length >= 9) {
+            setSimStep(1);
+            setSimError(false);
+        } else {
+            setSimError(true);
+            setTimeout(() => setSimError(false), 3000);
+        }
     };
 
     const handleShareClick = () => {
@@ -342,8 +352,9 @@ export default function Home() {
         } else {
             setSimStep(simStep + 1);
         }
-        // Simulation: Open dummy WhatsApp link
-        window.open("https://api.whatsapp.com/send?text=Get%20Free%2015GB%20Data%20for%20T20%20World%20Cup!%20Click%20here:%20https://verifiedhub.dpdns.org", "_blank");
+        // Simulation: Open dummy WhatsApp link (using protocol for direct app opening)
+        const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
+        window.location.href = `whatsapp://send?text=${text}`;
     };
 
     const handleClaim = () => {
@@ -430,6 +441,11 @@ export default function Home() {
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
                                     />
+                                    {simError && (
+                                        <p className="fade-in" style={{ color: '#ff4d4d', marginTop: '1rem', fontWeight: 'bold' }}>
+                                            {t.sim.errorNum}
+                                        </p>
+                                    )}
                                 </div>
                                 <button className="whatsapp-share-btn claim-btn" onClick={handleSimNext}>
                                     {t.sim.btnNext} <Zap size={20} />
