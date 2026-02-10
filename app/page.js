@@ -23,6 +23,7 @@ import {
     Wifi,
     Menu,
     X,
+    CheckCircle2,
     Terminal,
     Download,
     Phone,
