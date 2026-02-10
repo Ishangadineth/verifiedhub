@@ -219,13 +219,13 @@ const translations = {
     ta: {
         sim: {
             badge: "T20 உலகக் கோப்பை - இலங்கை விசேட சலுகை",
-            title: "இலவச 15GB டேட்டாவைப் பெறுங்கள்",
+            title: "இலவச 15GB டேட்டාවைப் பெறுங்கள்",
             subtitle: "Dialog, Mobitel, Hutch மற்றும் Airtel வாடிக்கையாளர்களுக்கு மாத்திரம்",
             inputPlaceholder: "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும் (உதாரணம்: 07x xxxxxxx)",
             btnNext: "செயற்படுத்து",
             shareMsg: "உங்கள் டேட்டா பேக்கைப் பெற கீழுள்ள படிநிலைகளை முடிக்கவும்",
             step0: "இந்த செய்தியை WhatsApp இல் 20 நண்பர்கள் அல்லது 5 குழுக்களுக்கு பகிரவும்",
-            step1: "இந்த செய்தியை மேலும் 15 நண்பர்கள் அல்லது 4 குழுக்களுக்கு பகிரவும்",
+            step1: "இந்த செய்தியை மேலும் 15 நண்பர்கள் அல்லது 4 குழுக்களுக்கு பகිරவும்",
             step2: "இந்த செய்தியை மேலும் 10 நண்பர்கள் அல்லது 2 குழுக்களுக்கு பகிரவும்",
             step3: "இந்த செய்தியை மேலும் 5 நண்பர்கள் அல்லது 1 குழுவுக்கு பகிரவும்",
             step4: "அனைத்து படிநிலைகளும் முடிந்தது! இப்போது உங்கள் 15GB ஐப் பெற்றுக்கொள்ளுங்கள்",
@@ -242,70 +242,70 @@ const translations = {
             scams: "மோசடி வகைகள்",
             malware: "Malware",
             sl_safety: "நிறுவனங்கள்",
-            attacks: "தாக்குதல்கள்",
+            attacks: "தாක්කුතல்கள்",
             report: "புகார்",
             readMore: "மேலும் அறிய...."
         },
         hero: {
-            title: "டிஜிட்டல் மோசடிகளில் இருந்து",
+            title: "ඩිජිටල් මෝසඩികളில் இருந்து",
             titleSpan: "எப்போதும் பாதுகாப்பாக இருங்கள்",
             subtitle: "இணைய மோசடிகள், வைரஸ்கள் (Malware) மற்றும் தரவு திருட்டுக்களில் இருந்து தப்பிக்கத் தேவையான அனைத்து தகவல்களையும் இலங்கையில் நடந்த உண்மையான சம்பவங்களையும் இங்கே பாருங்கள்.",
-            btn1: "மோசடி வகைகள்",
+            btn1: "மோසடி வகைகள்",
             btn2: "பாதுகாப்பு படிநிலைகள்"
         },
         threatAlert: {
-            title: "அச்சுறுத்தல் எச்சரிக்கை",
-            subtitle: "நேரடி கண்காணிப்பு",
-            today: "புதிய மோசடி அறிக்கைகள்",
-            risk: "ஆபாத்து நிலை",
-            high: "அதிகம்"
+            title: "අච්චුරුතල් එච්චරක්කෛ",
+            subtitle: "நேරඩි කන්කානිප්පු",
+            today: "පුදිය මෝසඩි අරික්කෛගල්",
+            risk: "ආපාත්තු නිලෛ",
+            high: "අධිකම්"
         },
         scamTypes: {
-            title: "டிஜிட்டல் மோசடிகள்",
-            titleSpan: "மற்றும் திருட்டுகள்",
-            phishing: { title: "Phishing (போலி தளங்கள்)", desc: "கடவுச்சொற்கள் மற்றும் வங்கி விபரங்களைத் திருட உருவாக்கப்பட்ட போலி இணையதளங்கள்." },
-            whatsapp: { title: "WhatsApp மோசடிகள்", desc: "நண்பர் போல நடித்து பணம் அல்லது OTP குறியீடுகளைக் கேட்கும் மோசடிகள்." },
-            promo: { title: "போலி விளம்பரங்கள்", desc: "பிரபல நிறுவனங்களின் பெயர்களைப் பயன்படுத்தி போலி சலுகைகள் அல்லது பரிசுகளை வழங்கும் மோசடிகள்." },
-            dataScam: { title: "இலவச டேட்டா", desc: "இலவச டேட்டா தருவதாகக் கூறி உங்களை ஆபத்தான தளங்களுக்கு அழைத்துச் செல்லும் மோசடிகள்." },
-            malwareSoftware: { title: "பாதிக்கப்பட்ட மென்பொருட்கள்", desc: "பல்வேறு வசதிகளைத் தருவதாகக் கூறி உங்கள் சாதனங்களில் Malware ஐ நிறுவும் மென்பொருட்கள்." },
-            hacking: { title: "Hacking (ஊடுருவல்)", desc: "உங்கள் தனிப்பட்ட கணக்குகள் அல்லது அமைப்புகளை அனுமதியின்றி அணுகி தரவுகளைத் திருடுதல்." },
-            investment: { title: "முதலீட்டு மோசடிகள்", desc: "பணத்தை இரட்டிப்பாக்குவதாகக் கூறும் போலி Crypto மற்றும் Online முதலீட்டு மோசடிகள்." },
-            fakeJobs: { title: "போலி வேலைகள்", desc: "வெளிநாட்டு அல்லது வீட்டிலிருந்தே செய்யும் வேலைகளைத் தருவதாகக் கூறிப் பணம் பறித்தல்." }
+            title: "ඩිජිටල් මෝසඩිකල්",
+            titleSpan: "මට්රුම් තිරුට්ටුක්කල්",
+            phishing: { title: "Phishing (පෝලි තලංගල්)", desc: "කඩවුච්චොල්ගල් මට්රුම් වංගි විපරංගලෛත් තිරුඩ උරුවාක්කප්පට්ට පෝලි ඉනෛයතලංගල්." },
+            whatsapp: { title: "WhatsApp මෝසඩිකල්", desc: "නන්පර් පෝල නඩිත්තු පනම් අල්ලදු OTP කුරියීඩුගලෛක් කේක්කුම් මෝසඩිකල්." },
+            promo: { title: "පෝලි විළම්පරංගල්", desc: "පිරපල නිරුවනංගලින් පෙයර්කලෛප් පයන්පடுத்தි පෝලි චලුගෛගල් අල්ලදු පරිචුගලෛ වැලංගුම් මෝසඩිකල්." },
+            dataScam: { title: "ඉලවච ඩේට්ටා", desc: "ඉලවච ඩේට්ටා තරුපදාගක් කූරි උංගලෛ ආපත්තාන තලංගලුක්කු අලෛත්තු චෙල්ලුම් මෝසඩිකල්." },
+            malwareSoftware: { title: "පාතික්කප්පට්ට මෙන්පොරුට්කල්", desc: "පල්වේරු වචදිගලෛත් තරුපදාගක් කූරි උංගල් චාදනංගළිල් Malware අය් නිරුවුම් මෙන්පොරුට්කල්." },
+            hacking: { title: "Hacking (ඌඩුරුවල්)", desc: "උංගල් තනිප්පට්ට කණක්කුක්කල් අල්ලදු අමෛප්පුගලෛ අනුමතියින්රි අනුගි තරවුගලෛත් තිරුඩුතල්." },
+            investment: { title: "මුදලීට්ටු මෝසඩිකල්", desc: "පණත්තෛ ඉරට්ටිප්පාක්කුපදාගක් කූරුම් පෝලි Crypto මට්රුම් Online මුදලීට්ටු මෝසඩිකල්." },
+            fakeJobs: { title: "පෝලි වේලෛගල්", desc: "වෙළිනාට්ටු අල්ලදු වීට්ටිරුන්ප්පදේ චෙයියුම් වේලෛගලෛත් තරුපදාගක් කූරිප් පනම් පරිත්තල්." }
         },
         malware: {
             title: "Malware & Threat",
-            titleSpan: "விளக்கம்",
-            virus: { title: "கணினி வைரஸ்", desc: "ஏனைய மென்பொருட்களுடன் இணைந்து கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியீடுகள்." },
-            worms: { title: "வோர்ම්ස් (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவி பாதிப்பை ஏற்படுத்தும் மென்பொருட்கள்." },
-            spyware: { title: "ஸ்பைவேர் (Spyware)", desc: "உங்கள் தரவுகளை இரகசியமாகக் கண்காணித்துத் திருடும் மென்பொருட்கள்." },
-            adware: { title: "அட்வேர் (Adware)", desc: "தேவையற்ற விளம்பரங்களைக் காட்டி கணினியை மந்தமாக்கும் மென்பொருட்கள்." },
-            bots: { title: "Bots & Botnets", desc: "சைபர் தாக்குதல்களுக்காக ஹேக்கர்களால் பயன்படுத்தப்படும் பாதிக்கப்பட்ட கணினி வலைப்பின்னல்கள்." },
-            hijacker: { title: "Browser Hijacker", desc: "உங்கள் உலவியின் தேடல் இயந்திரத்தை அனுமதியின்றி மாற்றும் மென்பொருட்கள்." },
-            hacker: { title: "ஹேக்கர்கள் (Hackers)", desc: "அனுமதியின்றி கணினி அமைப்புக்ளுக்குள் நுழையும் நபர்கள்." },
-            spam: { title: "ஸ்பேம் (Spam)", desc: "அளவுக்கு அதிகமாக வரும் தேவையற்ற மற்றும் பாதிப்பான செய்திகள்." }
+            titleSpan: "විළක්කම්",
+            virus: { title: "කණිනි වෛරස්", desc: "ඒනෛය මෙන්පොරුට්කලුඩන් ඉනෛන්දු කණිනියෛප් පාතික්කුම් තීංගිලෛක්කුම් කුරියීඩුගල්." },
+            worms: { title: "වෝර්ම්ස් (Worms)", desc: "වලෛප්පින්නල්ගල් මූලම් තානාගප් පරවි පාතිප්පෛ ඒර්පடுத்தුම් මෙන්පොරුට්කල්." },
+            spyware: { title: "ස්පෛවෙයාර් (Spyware)", desc: "උංගල් තරවුගලෛ ඉරකචියමාගක් කන්කානිත්තුත් තිරුඩුම් මෙන්පොරුට්kල්." },
+            adware: { title: "අට්වෙයාර් (Adware)", desc: "තේවෛයට්ට විළම්පරංගලෛක් කාට්ටි කණිනියෛ මන්දමාක්කුම් මෙන්පොරුට්කල්." },
+            bots: { title: "Bots & Botnets", desc: "චෛපර් තාක්කුතල්ගළුක්කාග හෙක්කර්කළාල් පයන්පடுத்தප්පඩුම් පාතික්කප්පට්ට කණිනි වලෛප්පින්නල්ගල්." },
+            hijacker: { title: "Browser Hijacker", desc: "උංගල් උලවියින් තේඩල් ඉයන්දිරත්තෛ අනුමතියින්රි මාට්රුම් මෙන්පොරුට්කල්." },
+            hacker: { title: "හෙක්කර්කල් (Hackers)", desc: "අනුමතියින්රි කණිනි අමෛප්පුක්කුළුක්කුල් නුලෛයුම් නපර්කල්." },
+            spam: { title: "ස්පේම් (Spam)", desc: "අළවුක්කු ඇතිගමාග වරුම් තේවෛයට්ට මට්රුම් පාතිප්පාන චෙය්තිගල්." }
         },
         attacks: {
-            title: "இலங்கையில் நடந்த",
-            titleSpan: "சமீபத்திய சைபர் தாக்குதல்கள்",
-            attack1: { title: "Gov.lk தரவு இழப்பு (2023)", desc: "அரச மின்னஞ்சல் அமைப்பில் ஏற்பட்ட தாக்குதலால் பெருமளவிலான தரவுகள் நிரந்தரமாக அழிந்தன." },
-            attack2: { title: "வங்கி SMS மோசடிகள் (2024)", desc: "பிரபல வங்கிகளின் பெயரில் போலி SMS அனுப்பி கணக்குகளில் இருந்த பணம் திருடப்பட்ட பெரிய அளவிலான மோசடி." },
-            attack3: { title: "WhatsApp கடத்தல் (Live)", desc: "பிரபலமானவர்கள் மற்றும் பொதுமக்களின் ஆயிரக்கணக்கான WhatsApp கணக்குகள் OTP ஊடாக கைப்பற்றப்பட்ட நிகழ்வுகள்." },
+            title: "ඉලංගෛයිල් නඩන්ද",
+            titleSpan: "චමීපත්තිය චෛපර් තාක්කුතල්ගල්",
+            attack1: { title: "Gov.lk තරවු ඉළප්පු (2023)", desc: "අරච මින්නංචල් අමෛප්පිල් ඒර්පට්ට තාක්කුතලාල් පෙරුමළවිලාන තරවුගල් නිරන්දරමාග අළින්දන." },
+            attack2: { title: "වංගි SMS මෝසඩිකල් (2024)", desc: "පිරපල වංගිගලින් පෙයරිල් පෝලි SMS අනුප්පි කණක්කුක්කළිල් ඉරුන්ද පනම් තිරුඩප්පට්ට පෙරිය අළවිලාන මෝසඩි." },
+            attack3: { title: "WhatsApp කඩත්තල් (Live)", desc: "පිරපලමානවර්කල් මට්රුම් පොදුමක්කළින් ආයිරක්කණක්කාන WhatsApp කණක්කුක්කල් OTP ඌඩාග කෛප්පත්ටප්පට්ට නිගල්වුගල්." },
         },
         mission: {
-            title: "எமது நோக்கம் மற்றும் பொறுப்பு",
-            text: "verifiedhub.dpdns.org என்பது பொதுச் சேவையாகப் பராமரிக்கப்படும் ஒரு சுயாதீன தளமாகும். சைபர் திருடர்களிடமிருந்து உங்களைப் பாதுகாப்பதும், இதுபோன்ற மோசடிகளுக்கு நீங்கள் மீண்டும் பலியாகாமல் இருக்க உங்களுக்குத் தெளிவூட்டுவதுமே எமது ஒரே நோக்கமாகும். இந்த இணையதளம் உங்கள் எந்தத் தகவலையும் சேகரிக்காது, இது கல்வி நோக்கங்களுக்காக மட்டுமே பயன்படுத்தப்படுகிறது."
+            title: "එමදු නෝක්කම් මට්රුම් පොරුප්පු",
+            text: "verifiedhub.dpdns.org එන්පදු පොදුච් චේවැයාගප් පරාමරික්කප්පඩුම් ඔරු චුයාධීන තලමාගුම්. චෛපර් තිරුඩර්කළිඩමිරුන්දු උංගලෛප් පාදුකාප්පදුම්, ඉදුපෝන්ර මෝසඩිගළුක්කු නීංගල් මීණ්ඩුම් පලියාගාමල් ඉරුක්ක උංගළුක්කු තෙළිවූට්ටුවදුමේ එමදු ඔරේ නෝක්කමාගුම්. ඉන්ද ඉනෛයතලම් උංගල් එන්ද තගවල්ලෛයම් චේගරික්කදු, ඉදු කල්වි නෝක්කංගළුක්කාග මට්ටුමේ පයන්පடுத்தප්පඩුගිරදු."
         },
         sl_safety: {
-            title: "இலங்கை சைபர்",
-            titleSpan: "பாதுகாப்பு நிறுவனங்கள்",
-            cert: "Sri Lanka CERT|CC - அவசரகால பதில் குழு",
-            icta: "ICTA - தகவல் தொழில்நுட்ப நிறுவனம்",
-            slp: "சைபர் குற்றப்பிரிவு (Cyber Crime Division)",
-            trcsl: "TRCSL - தொலைத்தொடர்பு ஒழுங்குமுறை ஆணையம்"
+            title: "ඉලංගෛ චෛපර්",
+            titleSpan: "පාදුකාප්පු නිරුවනංගල්",
+            cert: "Sri Lanka CERT|CC - අවචරකාල පතිල් කුළු",
+            icta: "ICTA - තගවල් තොළිල්නුට්ප නිරුවනම්",
+            slp: "චෛපර් කුට්ටප්පිරිවු (Cyber Crime Division)",
+            trcsl: "TRCSL - තොලෛත්තොඩර්පු ඔළුංගුමුරෛ ආණෛයම්"
         },
         footer: {
-            desc: "இது ஒரு தன்னார்வ முயற்சி. உங்கள் பாதுகாப்பிற்காக மாத்திரமே இது செயல்படுகிறது.",
-            copyright: "Verified Hub Collective. ஒருவரை ஒருவர் பாதுகாப்போம்."
+            desc: "ඉදු ඔරු තන්නර්ව මුයට්චි. උංගල් පාදුකාප්පිට්කාග මාත්තිරමේ ඉදු චෙයල්පඩුගිරදු.",
+            copyright: "Verified Hub Collective. ඔරුවරෛ ඔරුවර් පාදුකාප්පෝම්."
         }
     }
 };
@@ -537,17 +537,22 @@ export default function Home() {
             {/* Banner Ad 728x90 - Top Leaderboard */}
             <div className="ad-container-top" style={{ padding: '1rem 0', display: 'flex', justifyContent: 'center', background: 'rgba(0,0,0,0.2)' }}>
                 <div id="ad-target-728x90">
-                    <Script id="ad-options-728x90" strategy="afterInteractive">
-                        {`
-                            atOptions = {
-                                'key' : '0255561aa84d3f6ffea292e3c7a0ccd5',
-                                'format' : 'iframe',
-                                'height' : 90,
-                                'width' : 728,
-                                'params' : {}
-                            };
-                        `}
-                    </Script>
+                    <Script
+                        id="ad-options-728x90"
+                        strategy="afterInteractive"
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                window.atOptions728x90 = {
+                                    'key' : '0255561aa84d3f6ffea292e3c7a0ccd5',
+                                    'format' : 'iframe',
+                                    'height' : 90,
+                                    'width' : 728,
+                                    'params' : {}
+                                };
+                                window.atOptions = window.atOptions728x90;
+                            `
+                        }}
+                    />
                     <Script src="https://www.highperformanceformat.com/0255561aa84d3f6ffea292e3c7a0ccd5/invoke.js" strategy="afterInteractive" />
                 </div>
             </div>
@@ -608,17 +613,22 @@ export default function Home() {
                 <section className="ad-section-rectangle" style={{ padding: '2rem 10%', display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
                     {/* Banner Ad 300x250 - Rectangle */}
                     <div id="ad-target-300x250">
-                        <Script id="ad-options-300x250" strategy="afterInteractive">
-                            {`
-                                atOptions = {
-                                    'key' : 'cee892590aa631fba73ab14a131d9973',
-                                    'format' : 'iframe',
-                                    'height' : 250,
-                                    'width' : 300,
-                                    'params' : {}
-                                };
-                            `}
-                        </Script>
+                        <Script
+                            id="ad-options-300x250"
+                            strategy="afterInteractive"
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                    window.atOptions300x250 = {
+                                        'key' : 'cee892590aa631fba73ab14a131d9973',
+                                        'format' : 'iframe',
+                                        'height' : 250,
+                                        'width' : 300,
+                                        'params' : {}
+                                    };
+                                    window.atOptions = window.atOptions300x250;
+                                `
+                            }}
+                        />
                         <Script src="https://www.highperformanceformat.com/cee892590aa631fba73ab14a131d9973/invoke.js" strategy="afterInteractive" />
                     </div>
 
@@ -681,17 +691,22 @@ export default function Home() {
                 {/* Banner Ad 320x50 - Mobile sticky/bottom */}
                 <section className="ad-section-mobile" style={{ padding: '2rem 0', display: 'flex', justifyContent: 'center' }}>
                     <div id="ad-target-320x50">
-                        <Script id="ad-options-320x50" strategy="afterInteractive">
-                            {`
-                                atOptions = {
-                                    'key' : 'f2e63fbc08b4c3d0d87309cb1885d7da',
-                                    'format' : 'iframe',
-                                    'height' : 50,
-                                    'width' : 320,
-                                    'params' : {}
-                                };
-                            `}
-                        </Script>
+                        <Script
+                            id="ad-options-320x50"
+                            strategy="afterInteractive"
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                    window.atOptions320x50 = {
+                                        'key' : 'f2e63fbc08b4c3d0d87309cb1885d7da',
+                                        'format' : 'iframe',
+                                        'height' : 50,
+                                        'width' : 320,
+                                        'params' : {}
+                                    };
+                                    window.atOptions = window.atOptions320x50;
+                                `
+                            }}
+                        />
                         <Script src="https://www.highperformanceformat.com/f2e63fbc08b4c3d0d87309cb1885d7da/invoke.js" strategy="afterInteractive" />
                     </div>
                 </section>
