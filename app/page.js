@@ -381,8 +381,8 @@ export default function Home() {
                     <div className="shield-icon-container">
                         <Lock size={60} className="glow-icon" />
                     </div>
-                    <h2 className="modal-title">ඩිජිටල් ආරක්ෂාව තහවුරු කරන්න</h2>
-                    <p className="modal-desc">Secure Your Digital Presence / உங்களின் பாதுகாப்பை உறுதிப்படுத்துங்கள்</p>
+                    <h2 className="modal-title">ඔබේ භාෂාව තහවුරු කරන්න</h2>
+                    <p className="modal-desc">Select Your Language / உங்கள் மொழியை உறுதிப்படுத்தவும்</p>
                     <div className="lang-grid-container">
                         <button onClick={() => selectLanguage('si')} className="lang-btn main-l">සිංහල</button>
                         <button onClick={() => selectLanguage('en')} className="lang-btn">English</button>
