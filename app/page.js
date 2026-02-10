@@ -329,10 +329,6 @@ export default function Home() {
         setMounted(true);
         const savedLang = localStorage.getItem("user-lang");
         if (savedLang) setLang(savedLang);
-
-        // Check if simulation was already completed in this session
-        const simDone = sessionStorage.getItem("sim-completed");
-        if (simDone) setIsSimActive(false);
     }, []);
 
     const selectLanguage = (l) => {
