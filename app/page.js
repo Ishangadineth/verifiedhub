@@ -655,7 +655,7 @@ export default function Home() {
             </footer>
 
             <div className="whatsapp-widget-container fade-in active">
-                <div className="chat-label">Support Online</div>
+                <div className="chat-label">Share with Friends</div>
                 <button
                     className="whatsapp-float-btn"
                     onClick={() => {
