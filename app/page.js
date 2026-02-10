@@ -6,16 +6,22 @@ import {
     ShieldCheck,
     Search,
     AlertTriangle,
-    HandMetal,
-    Lock,
-    Eye,
     TrendingUp,
     Globe,
     CheckCircle2,
-    FileText,
     UserX,
     MessageCircle,
-    AlertCircle
+    AlertCircle,
+    Zap,
+    Bug,
+    Ghost,
+    Cpu,
+    ShieldHalf,
+    ExternalLink,
+    Lock,
+    Eye,
+    Activity,
+    UserCheck
 } from "lucide-react";
 
 const translations = {
@@ -23,34 +29,34 @@ const translations = {
         nav: {
             home: "මුල් පිටුව",
             scams: "මංකොල්ල වර්ග",
-            prevention: "ආරක්ෂා වීම",
-            cases: "අතීත සිදුවීම්",
-            report: "දැනුවත් කරන්න"
+            malware: "Malware දැනුම",
+            sl_safety: "ලංකාවේ ආරක්ෂාව",
+            report: "වාර්තා කරන්න"
         },
         hero: {
-            title: "ඩිජිටල් මංකොල්ල වලින්",
-            titleSpan: "ආරක්ෂා වන්න",
-            subtitle: "අන්තර්ජාලය හරහා සිදුකරන වංචාවන් හඳුනා ගැනීමට, දත්ත සොරකම් කිරීම් වලින් වැළකී සිටීමට සහ ඔබේ ඩිජිටල් ජීවිතය සුරක්ෂිත කර ගැනීමට අවශ්‍ය දැනුම මෙතැනින් ලබාගන්න.",
+            title: "ඩිජිටල් වංචා වලින්",
+            titleSpan: "නිරන්තරයෙන් ආරක්ෂා වන්න",
+            subtitle: "අන්තර්ජාලය හරහා සිදුවන වංචාවන්, වෛරසයන් (Malware) සහ දත්ත සොරකම් කිරීම් වලින් බේරී සිටීමට අවශ්‍ය සියලුම තොරතුරු එකම තැනකින් ලබාගන්න.",
             btn1: "වංචා වර්ග බලන්න",
             btn2: "ආරක්ෂිත පියවර"
         },
         threatAlert: {
             title: "අන්තරායකාරී තත්ත්වය",
             subtitle: "සජීවී නිරීක්ෂණය ක්‍රියාත්මකයි",
-            today: "අද වාර්තා වූ වංචා",
+            today: "අලුත් වංචා වාර්තා",
             risk: "අවදානම් මට්ටම",
             high: "ඉහළයි"
         },
         scamTypes: {
-            title: "ප්‍රධාන ඩිජිටල්",
-            titleSpan: "වංචා වර්ග",
+            title: "ඩිජිටල් වංචා",
+            titleSpan: "සහ මංකොල්ල",
             phishing: {
-                title: "ව්‍යාජ වෙබ් අඩවි (Phishing)",
-                desc: "ඔබේ බැංකු ගිණුම් හෝ සමාජ මාධ්‍ය ගිණුම් වල මුරපද සොරකම් කිරීමට සාදන ලද ව්‍යාජ වෙබ් අඩවි."
+                title: "Phishing (ව්‍යාජ අඩවි)",
+                desc: "ඔබේ Password සහ බැංකු විස්තර සොරකම් කිරීමට සාදන ලද ව්‍යාජ වෙබ් අඩවි."
             },
             whatsapp: {
                 title: "WhatsApp වංචා",
-                desc: "යාළුවන් මෙන් පෙනී සිටිමින් හෝ කේත (OTP) ඉල්ලමින් සිදුකරන WhatsApp මංකොල්ල."
+                desc: "යාළුවන් මෙන් පෙනී සිටිමින් මුදල් හෝ OTP කේත ඉල්ලා සිටින WhatsApp මංකොල්ල."
             },
             investment: {
                 title: "ආයෝජන වංචා",
@@ -58,117 +64,115 @@ const translations = {
             },
             fakeJobs: {
                 title: "ව්‍යාජ රැකියා",
-                desc: "විදේශ රැකියා හෝ අමතර ආදායම් මාර්ග ලබාදෙන බව පවසා මුදල් සොරකම් කිරීම."
+                desc: "විදේශ රැකියා ලබාදෙන බව පවසා මුදල් සොරකම් කිරීම."
             }
         },
-        checklist: {
-            title: "අලුත් අඩවියකට යන්න කලින්",
-            titleSpan: "මේවා බලන්න",
-            step1: "URL එක නිවැරදිද බලන්න (උදා: google.com වෙනුවට g00gle.com ද?)",
-            step2: "Padlock (අගුල) සළකුණ තිබේදැයි බලන්න (HTTPS තිබිය යුතුය).",
-            step3: "අනවශ්‍ය ලෙස පෞද්ගලික තොරතුරු ඉල්ලන්නේදැයි සැක කරන්න.",
-            step4: "සීමාව ඉක්මවූ දීමනා හෝ තෑගි ගැන ප්‍රවේශමෙන් ක්‍රියා කරන්න.",
-            step5: "වෙබ් අඩවියේ පෙනුම සහ අකුරු වල වැරදි ඇත්දැයි බලන්න."
+        malware: {
+            title: "Malware & Threat",
+            titleSpan: "Glossary",
+            virus: { title: "Computer Virus", desc: "වෙනත් මෘදුකාංග වලට ඇතුල් වී විනාශ කරන හානිකර කේත." },
+            worms: { title: "Worms", desc: "ජාලයක් හරහා තනිවම පැතිරී යන වෛරස වර්ගයකි." },
+            spyware: { title: "Spyware", desc: "ඔබේ දත්ත රහසින් නිරීක්ෂණය කර සොරකම් කරන මෘදුකාංග." },
+            adware: { title: "Adware", desc: "අනවශ්‍ය වෙළඳ දැන්වීම් පෙන්වමින් පරිගණකය අඩපණ කරයි." },
+            bots: { title: "Bots & Botnets", desc: "සයිබර් ප්‍රහාර එල්ල කිරීමට හැකර්වරුන් පාවිච්චි කරන මැෂින් ජාල." },
+            hijacker: { title: "Browser Hijacker", desc: "ඔබේ Search engine එක හෝ homepage එක බලහත්කාරයෙන් වෙනස් කිරීම." },
+            hacker: { title: "Hackers", desc: "ඔබේ අවසරයකින් තොරව පද්ධතිවලට ඇතුල් වන පුද්ගලයින්." },
+            spam: { title: "Spam", desc: "විශාල වශයෙන් ලැබෙන අනවශ්‍ය සහ හානිකර ඊමේල් පණිවිඩ." }
         },
-        caseStudies: {
-            title: "ලංකාවේ සිදුවූ",
-            titleSpan: "සැබෑ සිදුවීම්",
-            case1: {
-                title: "WhatsApp මුදල් ඉල්ලීම",
-                desc: "මිතුරෙකුගේ ගිණුම හැක් කර ඔහු මෙන් පෙනී සිටිමින් හදිසියකට මුදල් ඉල්ලූ සිදුවීමක්."
-            },
-            case2: {
-                title: "ව්‍යාජ බැංකු SMS",
-                desc: "බැංකුවෙන් ලැබෙන SMS එකක් ලෙස පෙන්වා link එකක් මගින් සියලුම මුදල් සොරකම් කිරීම."
-            }
+        sl_safety: {
+            title: "ලංකාවේ සයිබර්",
+            titleSpan: "ආරක්ෂක ආයතන",
+            cert: "Sri Lanka CERT|CC - පරිගණක හදිසි ප්‍රතිචාර සංසදය",
+            icta: "ICTA - ශ්‍රී ලංකා තොරතුරු හා සන්නිවේදන තාක්ෂණ නියෝජිතායතනය",
+            slp: "ශ්‍රී ලංකා පොලිස් සයිබර් අපරාධ ඒකකය (Cyber Crime Division)",
+            trcsl: "TRCSL - විදුලි සංදේශ නියාමන කොමිෂන් සභාව"
         },
         footer: {
-            desc: "ඩිජිටල් ලෝකය වංචාවන්ගෙන් තොර ආරක්ෂිත තැනක් කිරීමේ අරමුණින් ක්‍රියාත්මක වන ස්වේච්ඡා වැඩසටහනකි.",
-            copyright: "Verified Hub. සියලු හිමිකම් ඇවිරිණි. ඔබේ ආරක්ෂාව අපේ ප්‍රමුඛතාවයයි."
+            desc: "මෙය කිසිදු පෞද්ගලික ලාභයකින් තොරව පොදු ජනයා දැනුවත් කිරීම සඳහා පමණක් ක්‍රියාත්මක වන ප්‍රජා සත්කාරයකි.",
+            copyright: "Verified Hub. සියලු හිමිකම් ඇවිරිණි. අනන්‍යතාවය සුරැකී ඇත."
         }
     },
     en: {
         nav: {
             home: "Home",
             scams: "Scam Types",
-            prevention: "Prevention",
-            cases: "Case Studies",
-            report: "Report Scam"
+            malware: "Malware Knowledge",
+            sl_safety: "SL Institutions",
+            report: "Report"
         },
         hero: {
-            title: "Stay Ahead of",
-            titleSpan: "Digital Scams",
-            subtitle: "Your shield against the rising tide of online fraud. Learn to identify fake sites, avoid data theft, and secure your digital life.",
-            btn1: "Explore Scam Types",
-            btn2: "Safety Checklist"
+            title: "Stay Protected Against",
+            titleSpan: "Digital Fraud",
+            subtitle: "Get comprehensive information about online scams, malware, and data theft in one place. Your safety is our mission.",
+            btn1: "Explore Scams",
+            btn2: "Safety Steps"
         },
         threatAlert: {
-            title: "Threat Alert",
-            subtitle: "Real-time Monitoring Active",
-            today: "New Scams Today",
-            risk: "Risk Level",
+            title: "Threat Level",
+            subtitle: "Live Monitoring Active",
+            today: "New Threats Today",
+            risk: "Risk Assessment",
             high: "HIGH"
         },
         scamTypes: {
-            title: "Common Digital",
-            titleSpan: "Scams",
+            title: "Digital Scams",
+            titleSpan: "& Fraud",
             phishing: {
                 title: "Phishing Sites",
-                desc: "Fake websites that look exactly like your bank or social media login to steal your credentials."
+                desc: "Fake websites designed to steal your passwords and banking credentials."
             },
             whatsapp: {
                 title: "WhatsApp Scams",
-                desc: "Scams involving taking over accounts or asking for money by pretending to be a friend."
+                desc: "Scammers pretending to be contacts asking for money or security codes."
             },
             investment: {
                 title: "Investment Fraud",
-                desc: "'Get rich quick' schemes and fake crypto platforms promising impossible returns."
+                desc: "'Get rich quick' schemes and fake crypto platforms."
             },
             fakeJobs: {
-                title: "Fake Job Offers",
-                desc: "Scammers promising abroad jobs or high salaries to steal registration fees."
+                title: "Fake Job Ads",
+                desc: "Fraudulent overseas job opportunities asking for upfront fees."
             }
         },
-        checklist: {
-            title: "Before You Visit",
-            titleSpan: "A New Site",
-            step1: "Check the URL spelling carefully (e.g., google.com vs g00gle.com).",
-            step2: "Look for the Padlock icon (HTTPS) in the address bar.",
-            step3: "Be skeptical if the site asks for excessive personal data.",
-            step4: "Watch out for too-good-to-be-true offers or prizes.",
-            step5: "Check for poor design or multiple spelling errors."
+        malware: {
+            title: "Malware & Threat",
+            titleSpan: "Glossary",
+            virus: { title: "Computer Virus", desc: "Malicious code that attaches to software to damage systems." },
+            worms: { title: "Worms", desc: "Self-replicating malware that spreads across networks autonomously." },
+            spyware: { title: "Spyware", desc: "Software that secretly monitors and steals your private information." },
+            adware: { title: "Adware", desc: "Software that automatically displays unwanted advertisements." },
+            bots: { title: "Bots & Botnets", desc: "Networks of infected computers used to launch cyber attacks." },
+            hijacker: { title: "Browser Hijacker", desc: "Software that modifies web browser settings without permission." },
+            hacker: { title: "Hackers", desc: "Individuals who gain unauthorized access to computer systems." },
+            spam: { title: "Spam", desc: "Unsolicited, often malicious messages sent in bulk via email/SMS." }
         },
-        caseStudies: {
-            title: "Real World",
-            titleSpan: "Case Studies (SL)",
-            case1: {
-                title: "WhatsApp Emergency Request",
-                desc: "A scammer hacks a contact's profile and asks for urgent money transfers from friends."
-            },
-            case2: {
-                title: "Fake Bank Login SMS",
-                desc: "Users receive SMS alerts appearing to be from a bank, leading to fake login pages."
-            }
+        sl_safety: {
+            title: "Sri Lanka Security",
+            titleSpan: "Institutions",
+            cert: "Sri Lanka CERT|CC - Computer Emergency Readiness Team",
+            icta: "ICTA - Information and Communication Technology Agency",
+            slp: "Sri Lanka Police - Cyber Crime Division",
+            trcsl: "TRCSL - Telecommunications Regulatory Commission"
         },
         footer: {
-            desc: "A community-driven initiative focused on protecting the digital world from scams.",
-            copyright: "Verified Hub. All rights reserved. Your safety is our priority."
+            desc: "A non-profit community initiative focused on protecting the public from digital threats.",
+            copyright: "Verified Hub. All rights reserved. Identity Protected."
         }
     },
     ta: {
         nav: {
             home: "முகப்பு",
-            scams: "மோசடி வகைகள்",
-            prevention: "தடுப்பு",
-            cases: "உதாரணங்கள்",
-            report: "புகார் செய்"
+            scams: "மோசடி",
+            malware: "மால்வேர்",
+            sl_safety: "நிறுவனங்கள்",
+            report: "புகார்"
         },
         hero: {
             title: "டிஜிட்டல் மோசடிகளில்",
-            titleSpan: "இருந்து தற்காத்துக் கொள்ளுங்கள்",
-            subtitle: "இணைய மோசடிகளை அடையாளம் காணவும், தரவு திருட்டைத் தவிர்க்கவும் தேவையான அறிவைப் பெறுங்கள்.",
-            btn1: "வகைகளை பார்க்க",
-            btn2: "பாதுகாப்பு சரிபார்ப்பு"
+            titleSpan: "இருந்து பாதுகாப்பாக இருங்கள்",
+            subtitle: "இணைய மோசடிகள், வைரஸ்கள் மற்றும் தரவு திருட்டு பற்றிய முழுமையான தகவல்களை இங்கே பெறுங்கள்.",
+            btn1: "மோசடிகளை பார்க்க",
+            btn2: "பாதுகாப்பு පියවර"
         },
         threatAlert: {
             title: "அச்சுறுத்தல் எச்சரிக்கை",
@@ -178,48 +182,47 @@ const translations = {
             high: "அதிகம்"
         },
         scamTypes: {
-            title: "பொதுவான டிஜிட்டல்",
+            title: "டிஜிட்டல்",
             titleSpan: "மோசடிகள்",
             phishing: {
-                title: "போலி இணையதளங்கள்",
-                desc: "உங்கள் கணக்குகளை திருட உருவாக்கப்பட்ட போலியான இணையதளங்கள்."
+                title: "பிஷிங் (போலி தளங்கள்)",
+                desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்."
             },
             whatsapp: {
                 title: "வாட்ஸ்அப் மோசடிகள்",
-                desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) அல்லது பணம் கேட்கும் மோசடிகள்."
+                desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) கேட்கும் மோசடிகள்."
             },
             investment: {
                 title: "முதலீட்டு மோசடிகள்",
                 desc: "பணத்தை இரட்டிப்பாக்குவதாக கூறும் போலி முதலீட்டுத் திட்டங்கள்."
             },
             fakeJobs: {
-                title: "போலி வேலைவாய்ப்புகள்",
+                title: "போலி வேலைகள்",
                 desc: "வெளிநாட்டு வேலைகள் எனக் கூறி பணம் பறிக்கும் மோசடிகள்."
             }
         },
-        checklist: {
-            title: "புதிய தளத்திற்கு முன்",
-            titleSpan: "கவனிக்கவும்",
-            step1: "முகவரி (URL) சரியாக உள்ளதா எனப் பார்க்கவும்.",
-            step2: "பூட்டு அடையாளம் (HTTPS) உள்ளதா எனப் பார்க்கவும்.",
-            step3: "தேவையற்ற தனிப்பட்ட தகவல்களை வழங்க வேண்டாம்.",
-            step4: "அளவுக்கு அதிகமான சலுகைகளை சந்தேகிக்கவும்.",
-            step5: "தளத்தின் வடிவமைப்பு மற்றும் எழுத்துப் பிழைகளை கவனிக்கவும்."
+        malware: {
+            title: "மால்வேர்",
+            titleSpan: "விளக்கம்",
+            virus: { title: "கணினி வைரஸ்", desc: "கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியீடுகள்." },
+            worms: { title: "வோர்ම්ஸ் (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவும் வைரஸ்கள்." },
+            spyware: { title: "ஸ்பைவேர் (Spyware)", desc: "உங்கள் தகவல்களை இரகசியமாகத் திருடும் மென்பொருள்." },
+            adware: { title: "அட்வேர் (Adware)", desc: "தேவையற்ற விளம்பரங்களைக் காட்டும் மென்பொருள்." },
+            bots: { title: "பாட்கள் (Bots)", desc: "தாக்குதல்களை நடத்தப் பயன்படுத்தப்படும் பாதிக்கப்பட்ட கணினிகள்." },
+            hijacker: { title: "உலவி கடத்தல்", desc: "உலவி அமைப்புகளை அனுமதியின்றி மாற்றும் மென்பொருள்." },
+            hacker: { title: "ஹேக்கர்கள்", desc: "அனுමதியின்றி கணினிக்குள் நுழையும் நபர்கள்." },
+            spam: { title: "ஸ்பேம் (Spam)", desc: "பெருமளவில் வரும் தேவையற்ற செய்திகள்." }
         },
-        caseStudies: {
-            title: "இலங்கையில் நடந்த",
-            titleSpan: "உண்மைக் கதைகள்",
-            case1: {
-                title: "வாட்ஸ்அப் அவசர உதவி",
-                desc: "நண்பரின் கணக்கை ஹேக் செய்து அவசரமாக பணம் கேட்கும் மோசடி."
-            },
-            case2: {
-                title: "போலி வங்கி எஸ்.எம்.எஸ்",
-                desc: "வங்கியிலிருந்து வரும் மெசேஜ் போல காட்டி பணத்தைத் திருடும் லிಂಕ್‌கள்."
-            }
+        sl_safety: {
+            title: "இலங்கை பாதுகாப்பு",
+            titleSpan: "நிறுவனங்கள்",
+            cert: "Sri Lanka CERT|CC - கணினி அவசர தயார்நிலை குழு",
+            icta: "ICTA - தகவல் மற்றும் தொடர்பு தொழில்நுட்ப நிறுவனம்",
+            slp: "இலங்கை போலீஸ் - சைபர் குற்றப்பிரிவு",
+            trcsl: "TRCSL - தொலைத்தொடர்பு ஒழுங்குமுறை ஆணைக்குழு"
         },
         footer: {
-            desc: "டிஜிட்டல் உலகைப் பாதுகாக்க மேற்கொள்ளப்படும் ஒரு தன்னார்வ முயற்சி.",
+            desc: "பொதுமக்களைப் பாதுகாப்பதற்கான ஒரு இலவச சமூக சேவை.",
             copyright: "Verified Hub. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
         }
     }
@@ -259,12 +262,14 @@ export default function Home() {
         return (
             <div className="lang-selector-overlay">
                 <div className="glass-card lang-modal fade-in">
-                    <h2 style={{ marginBottom: '2rem', textAlign: 'center' }}>සෑම පියවරක්ම ආරක්ෂිතව තබන්න <br /><span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 400 }}>Step into Digital Safety</span></h2>
-                    <p style={{ textAlign: 'center', marginBottom: '2.5rem', opacity: 0.8 }}>භාෂාව තෝරන්න / Select Language / மொழியைத் தேர்ந்தெடுக்கவும்</p>
+                    <div className="shield-icon-container">
+                        <Lock size={48} className="gradient-text" />
+                    </div>
+                    <h2>තේරීම ආරක්ෂාකාරීව තබන්න <br /><span className="modal-sub">Choose Your Safety Gateway</span></h2>
                     <div className="lang-btn-group">
-                        <button onClick={() => selectLanguage('si')} className="btn-main">සිංහල</button>
-                        <button onClick={() => selectLanguage('en')} className="btn-secondary">English</button>
-                        <button onClick={() => selectLanguage('ta')} className="btn-secondary">தமிழ்</button>
+                        <button onClick={() => selectLanguage('si')} className="btn-main lang-select-btn">සිංහල</button>
+                        <button onClick={() => selectLanguage('en')} className="btn-secondary lang-select-btn">English</button>
+                        <button onClick={() => selectLanguage('ta')} className="btn-secondary lang-select-btn">தமிழ்</button>
                     </div>
                 </div>
             </div>
@@ -283,8 +288,8 @@ export default function Home() {
                 <ul className="nav-links">
                     <li><a href="#home">{t.nav.home}</a></li>
                     <li><a href="#scams">{t.nav.scams}</a></li>
-                    <li><a href="#prevention">{t.nav.prevention}</a></li>
-                    <li><a href="#cases">{t.nav.cases}</a></li>
+                    <li><a href="#malware">{t.nav.malware}</a></li>
+                    <li><a href="#institutions">{t.nav.sl_safety}</a></li>
                     <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
                 </ul>
             </nav>
@@ -293,14 +298,14 @@ export default function Home() {
                 <section className="hero" id="home">
                     <div className="hero-content">
                         <h1 className="fade-in">
-                            {t.hero.title} <span className="gradient-text">{t.hero.titleSpan}</span>
+                            {t.hero.title} <br /><span className="gradient-text">{t.hero.titleSpan}</span>
                         </h1>
                         <p className="subtitle fade-in-delay">
                             {t.hero.subtitle}
                         </p>
                         <div className="cta-group fade-in-delay-2">
                             <a href="#scams" className="btn-main" style={{ textDecoration: 'none' }}>{t.hero.btn1}</a>
-                            <a href="#prevention" className="btn-secondary" style={{ textDecoration: 'none' }}>{t.hero.btn2}</a>
+                            <a href="#malware" className="btn-secondary" style={{ textDecoration: 'none' }}>{t.nav.malware}</a>
                         </div>
                     </div>
                     <div className="hero-image fade-in-delay-3">
@@ -356,90 +361,59 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section id="prevention" className="prevention-section" style={{ padding: '8rem 10%', background: 'rgba(255,255,255,0.02)' }}>
-                    <div style={{ display: 'flex', gap: '4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-                        <div style={{ flex: 1, minWidth: '300px' }}>
-                            <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '2rem' }}>
-                                {lang === 'si' ? 'අඩවියක' : 'Identify'} <span className="gradient-text">{lang === 'si' ? 'විශ්වාසදායී බව බලමු' : 'Safe Sites'}</span>
-                            </h2>
-                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1.2rem' }}>
-                                <li className="checklist-item"><CheckCircle2 className="accent-icon" size={20} /><span>{t.checklist.step1}</span></li>
-                                <li className="checklist-item"><CheckCircle2 className="accent-icon" size={20} /><span>{t.checklist.step2}</span></li>
-                                <li className="checklist-item"><CheckCircle2 className="accent-icon" size={20} /><span>{t.checklist.step3}</span></li>
-                                <li className="checklist-item"><CheckCircle2 className="accent-icon" size={20} /><span>{t.checklist.step4}</span></li>
-                                <li className="checklist-item"><CheckCircle2 className="accent-icon" size={20} /><span>{t.checklist.step5}</span></li>
-                            </ul>
-                        </div>
-                        <div style={{ flex: 1, minWidth: '300px' }} className="glass-card">
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                                <Lock color="#00f2fe" />
-                                <h3 style={{ margin: 0 }}>{lang === 'si' ? 'වෙබ් අඩවි පරීක්ෂාව' : 'Site Analyzer'}</h3>
+                <section id="malware" className="features" style={{ background: 'rgba(79, 172, 254, 0.05)', borderRadius: '40px', margin: '0 5%' }}>
+                    <h2 className="section-title">
+                        {t.malware.title} <span className="gradient-text">{t.malware.titleSpan}</span>
+                    </h2>
+                    <div className="feature-grid thin">
+                        {Object.entries(t.malware).filter(([key]) => key !== 'title' && key !== 'titleSpan').map(([key, item]) => (
+                            <div className="feature-card small-pad" key={key}>
+                                <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', marginBottom: '0.5rem' }}>
+                                    <Bug size={20} className="gradient-text" />
+                                    <h4 style={{ margin: 0 }}>{item.title}</h4>
+                                </div>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7 }}>{item.desc}</p>
                             </div>
-                            <p style={{ opacity: 0.7, marginBottom: '1.5rem', fontSize: '0.9rem' }}>අවදානම් සහගත links මෙහි දමා පරීක්ෂා කළ හැක. (Coming Soon)</p>
-                            <div style={{ position: 'relative' }}>
-                                <input
-                                    type="text"
-                                    disabled
-                                    placeholder="Paste URL (e.g. https://...)"
-                                    style={{
-                                        width: '100%',
-                                        padding: '1rem',
-                                        borderRadius: '8px',
-                                        background: 'rgba(255,255,255,0.05)',
-                                        border: '1px solid var(--glass-border)',
-                                        color: 'white'
-                                    }}
-                                />
-                                <button
-                                    disabled
-                                    style={{
-                                        position: 'absolute',
-                                        right: '8px',
-                                        top: '8px',
-                                        background: 'var(--accent-secondary)',
-                                        border: 'none',
-                                        borderRadius: '4px',
-                                        padding: '0.4rem 1rem',
-                                        opacity: 0.5
-                                    }}
-                                >
-                                    Analyze
-                                </button>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </section>
 
-                <section id="cases" className="features" style={{ background: 'transparent' }}>
+                <section id="institutions" className="features">
                     <h2 className="section-title">
-                        {t.caseStudies.title} <span className="gradient-text">{t.caseStudies.titleSpan}</span>
+                        {t.sl_safety.title} <span className="gradient-text">{t.sl_safety.titleSpan}</span>
                     </h2>
-                    <div className="feature-grid">
-                        <div className="feature-card glass-glow">
-                            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-                                <div className="case-badge">CASE 01</div>
-                                <h3 style={{ margin: 0 }}>{t.caseStudies.case1.title}</h3>
-                            </div>
-                            <p style={{ color: 'var(--text-secondary)' }}>{t.caseStudies.case1.desc}</p>
+                    <div className="institution-list">
+                        <div className="glass-card inst-card">
+                            <ShieldHalf size={24} className="gradient-text" />
+                            <p>{t.sl_safety.cert}</p>
+                            <ExternalLink size={16} className="ext-link" />
                         </div>
-                        <div className="feature-card glass-glow">
-                            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-                                <div className="case-badge">CASE 02</div>
-                                <h3 style={{ margin: 0 }}>{t.caseStudies.case2.title}</h3>
-                            </div>
-                            <p style={{ color: 'var(--text-secondary)' }}>{t.caseStudies.case2.desc}</p>
+                        <div className="glass-card inst-card">
+                            <Cpu size={24} className="gradient-text" />
+                            <p>{t.sl_safety.icta}</p>
+                            <ExternalLink size={16} className="ext-link" />
+                        </div>
+                        <div className="glass-card inst-card">
+                            <Activity size={24} className="gradient-text" />
+                            <p>{t.sl_safety.slp}</p>
+                            <ExternalLink size={16} className="ext-link" />
+                        </div>
+                        <div className="glass-card inst-card">
+                            <Globe size={24} className="gradient-text" />
+                            <p>{t.sl_safety.trcsl}</p>
+                            <ExternalLink size={16} className="ext-link" />
                         </div>
                     </div>
                 </section>
 
                 <section className="article-preview">
-                    <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                    <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', borderRadius: '40px' }}>
                         <UserX size={48} className="gradient-text" style={{ marginBottom: '1rem' }} />
-                        <h2>{lang === 'si' ? 'ඔබේ සැඟවුණු ආරක්ෂකයා' : 'Your Anonymous Shield'}</h2>
+                        <h2>{lang === 'si' ? 'ඔබේ සැඟවුණු ආරක්ෂකයා' : 'Anonymous Initiative'}</h2>
                         <p style={{ marginTop: '1rem', opacity: 0.8 }}>
                             {lang === 'si'
-                                ? 'Verified Hub යනු කිසිදු පෞද්ගලික ලාභයක් බලාපොරොත්තු නොවන, පොදු ජනතාව දැනුවත් කිරීම සඳහා පමණක් ක්‍රියාත්මක වන ස්වාධීන ව්‍යාපෘතියකි. අපගේ එකම අරමුණ ඔබව ඩිජිටල් සොරුන්ගෙන් බේරා ගැනීමයි.'
-                                : 'Verified Hub is an independent project initiated for public awareness without any personal profit motive. Our only goal is to protect you from digital predators.'}
+                                ? 'Verified Hub යනු කිසිදු පෞද්ගලික ලාභයක් බලාපොරොත්තු නොවන, පොදු ජනතාව දැනුවත් කිරීම සඳහා පමණක් ක්‍රියාත්මක වන ස්වාධීන ප්‍රජා සත්කාරයකි. අන්තර්ජාලය සැමට ආරක්ෂිත තැනක් කිරීම අපේ අරමුණයි.'
+                                : 'Verified Hub is an independent community initiative for public awareness. We operate without a profit motive to make the internet a safer place for everyone.'}
                         </p>
                     </div>
                 </section>
@@ -452,11 +426,11 @@ export default function Home() {
                         <p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>{t.footer.desc}</p>
                     </div>
                     <div style={{ flex: 1, minWidth: '150px' }}>
-                        <h4>Social Safety</h4>
+                        <h4>Security Links</h4>
                         <ul style={{ listStyle: 'none', marginTop: '1rem', color: 'var(--text-secondary)', lineHeight: '2' }}>
                             <li>Stay Anonymous</li>
-                            <li>Report Fraud</li>
-                            <li>Community Safety</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms of Safety</li>
                         </ul>
                     </div>
                 </div>
@@ -467,58 +441,42 @@ export default function Home() {
 
             <style jsx global>{`
         .lang-selector-overlay {
-          position: fixed;
-          top: 0; left: 0; width: 100%; height: 100%;
-          background: #050505;
-          z-index: 9999;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+          background: #050505; z-index: 9999;
+          display: flex; align-items: center; justify-content: center;
+          padding: 20px;
         }
         .lang-modal {
-          padding: 3rem;
-          max-width: 500px;
-          border-radius: 32px;
+          padding: 3rem 2rem; width: 100%; max-width: 500px;
+          border-radius: 40px; text-align: center;
         }
-        .lang-btn-group {
-          display: grid;
-          gap: 1rem;
+        .shield-icon-container { margin-bottom: 1.5rem; }
+        .modal-sub { fontSize: 0.9rem; opacity: 0.6; fontWeight: 400; }
+        .lang-btn-group { display: grid; gap: 1rem; margin-top: 2rem; }
+        .lang-select-btn { width: 100%; padding: 1.2rem; border-radius: 20px; font-size: 1.1rem; }
+        
+        .feature-grid.thin { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .small-pad { padding: 1.5rem; }
+        
+        .institution-list { display: grid; gap: 1.2rem; max-width: 800px; margin: 0 auto; }
+        .inst-card { 
+          display: flex; align-items: center; gap: 1.5rem; padding: 1.2rem 2rem; 
+          border-radius: 20px; transition: 0.3s; cursor: pointer;
         }
+        .inst-card:hover { border-color: var(--accent-primary); transform: translateX(10px); }
+        .ext-link { margin-left: auto; opacity: 0.3; }
+        .inst-card:hover .ext-link { opacity: 1; color: var(--accent-primary); }
+
         .lang-switch-btn {
-          background: rgba(255,255,255,0.1);
-          border: 1px solid var(--glass-border);
-          color: white;
-          padding: 0.5rem 1rem;
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          cursor: pointer;
+          background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+          color: white; padding: 0.5rem 1rem; border-radius: 20px;
+          display: flex; align-items: center; gap: 0.5rem; cursor: pointer;
         }
-        .checklist-item {
-          display: flex;
-          gap: 1rem;
-          align-items: center;
-        }
-        .accent-icon {
-          color: #00f2fe;
-          flex-shrink: 0;
-        }
-        .case-badge {
-          background: rgba(0, 242, 254, 0.1);
-          color: #00f2fe;
-          padding: 2px 8px;
-          border-radius: 4px;
-          font-size: 0.7rem;
-          font-weight: 800;
-          display: flex;
-          align-items: center;
-        }
-        .glass-glow {
-          box-shadow: 0 0 20px rgba(0, 242, 254, 0.05);
-        }
-        .article-preview {
-          padding: 8rem 10%;
+
+        @media (max-width: 600px) {
+          .lang-modal { padding: 2rem 1.5rem; }
+          .feature-grid { grid-template-columns: 1fr; }
+          .hero h1 { font-size: 2.5rem; }
         }
       `}</style>
         </>
