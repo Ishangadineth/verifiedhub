@@ -58,7 +58,8 @@ const translations = {
             malware: "Malware",
             sl_safety: "ආයතන",
             attacks: "ප්‍රහාර",
-            report: "වාර්තා"
+            report: "වාර්තා",
+            readMore: "වැඩිදුර දැනගන්න...."
         },
         hero: {
             title: "ඩිජිටල් වංචා වලින්",
@@ -149,7 +150,8 @@ const translations = {
             malware: "Malware",
             sl_safety: "Safety Org",
             attacks: "Cyber Attacks",
-            report: "Report"
+            report: "Report",
+            readMore: "Read More...."
         },
         hero: {
             title: "Stay Protected Against",
@@ -240,7 +242,8 @@ const translations = {
             malware: "Malware",
             sl_safety: "நிறுவனங்கள்",
             attacks: "தாக்குதல்கள்",
-            report: "புகார்"
+            report: "புகார்",
+            readMore: "மேலும் அறிய...."
         },
         hero: {
             title: "டிஜிட்டல் மோசடிகளில் இருந்து",
@@ -272,7 +275,7 @@ const translations = {
             title: "Malware & Threat",
             titleSpan: "விளக்கம்",
             virus: { title: "கணினி வைரஸ்", desc: "ஏனைய மென்பொருட்களுடன் இணைந்து கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியீடுகள்." },
-            worms: { title: "வோர்ம்ஸ் (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவி பாதிப்பை ஏற்படுத்தும் மென்பொருட்கள்." },
+            worms: { title: "வோர்ම්ස් (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவி பாதிப்பை ஏற்படுத்தும் மென்பொருட்கள்." },
             spyware: { title: "ஸ்பைவேர் (Spyware)", desc: "உங்கள் தரவுகளை இரகசியமாகக் கண்காணித்துத் திருடும் மென்பொருட்கள்." },
             adware: { title: "அட்வேர் (Adware)", desc: "தேவையற்ற விளம்பரங்களைக் காட்டி கணினியை மந்தமாக்கும் மென்பொருட்கள்." },
             bots: { title: "Bots & Botnets", desc: "சைபர் தாக்குதல்களுக்காக ஹேக்கர்களால் பயன்படுத்தப்படும் பாதிக்கப்பட்ட கணினி வலைப்பின்னல்கள்." },
@@ -576,14 +579,14 @@ export default function Home() {
                 <section id="scams" className="features">
                     <h2 className="section-title">{t.scamTypes.title} <span className="gradient-text">{t.scamTypes.titleSpan}</span></h2>
                     <div className="feature-grid">
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Search className="gradient-text" size={40} /></div><h3>{t.scamTypes.phishing.title}</h3><p>{t.scamTypes.phishing.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Download className="gradient-text" size={40} /></div><h3>{t.scamTypes.malwareSoftware.title}</h3><p>{t.scamTypes.malwareSoftware.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Terminal className="gradient-text" size={40} /></div><h3>{t.scamTypes.hacking.title}</h3><p>{t.scamTypes.hacking.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p></div>
-                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Search className="gradient-text" size={40} /></div><h3>{t.scamTypes.phishing.title}</h3><p>{t.scamTypes.phishing.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Download className="gradient-text" size={40} /></div><h3>{t.scamTypes.malwareSoftware.title}</h3><p>{t.scamTypes.malwareSoftware.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Terminal className="gradient-text" size={40} /></div><h3>{t.scamTypes.hacking.title}</h3><p>{t.scamTypes.hacking.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
                     </div>
                 </section>
 
@@ -596,6 +599,7 @@ export default function Home() {
                                     <Bug size={20} className="gradient-text" /><h4 style={{ margin: 0 }}>{item.title}</h4>
                                 </div>
                                 <p style={{ fontSize: '0.85rem', opacity: 0.7 }}>{item.desc}</p>
+                                <span className="read-more-link small">{t.nav.readMore}</span>
                             </div>
                         ))}
                     </div>
@@ -614,9 +618,9 @@ export default function Home() {
                 <section id="attacks" className="features" style={{ background: 'rgba(255, 77, 77, 0.04)', paddingBottom: '8rem' }}>
                     <h2 className="section-title">{t.attacks.title} <span className="gradient-text" style={{ background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.attacks.titleSpan}</span></h2>
                     <div className="feature-grid thin">
-                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p></div>
-                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
-                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
                     </div>
 
                     <div className="mission-container">
@@ -626,6 +630,7 @@ export default function Home() {
                             <p style={{ opacity: 0.95, lineHeight: '2', fontSize: '1.15rem', fontWeight: '400' }}>
                                 {t.mission.text}
                             </p>
+                            <span className="read-more-link" style={{ marginTop: "2rem", display: "block" }}>{t.nav.readMore}</span>
                         </div>
                     </div>
                 </section>
@@ -650,7 +655,7 @@ export default function Home() {
             </footer>
 
             <button
-                className="whatsapp-float-btn fade-in"
+                className="whatsapp-float-btn fade-in active"
                 onClick={() => {
                     const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
                     window.location.href = `whatsapp://send?text=${text}`;
