@@ -371,6 +371,18 @@ export default function Home() {
         }, 4000); // 4 seconds as requested
     };
 
+    const handleSmartClick = (e, targetId) => {
+        if (e) e.preventDefault();
+        window.open("https://www.effectivegatecpm.com/ymh3n934?key=e50d8ade02e0bbee1d086db312fed98b", "_blank");
+        if (targetId) {
+            const element = document.getElementById(targetId.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setIsMenuOpen(false);
+    };
+
     useEffect(() => {
         if (!lang || isSimActive) return;
         const handleMouseMove = (e) => {
@@ -491,12 +503,12 @@ export default function Home() {
     return (
         <>
             <nav suppressHydrationWarning>
-                <div className="logo"><span className="gradient-text">Verified</span><span>Hub</span></div>
+                <div className="logo" onClick={(e) => handleSmartClick(e, 'home')} style={{ cursor: 'pointer' }}><span className="gradient-text">Verified</span><span>Hub</span></div>
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</a></li>
-                    <li><a href="#scams" onClick={() => setIsMenuOpen(false)}>{t.nav.scams}</a></li>
-                    <li><a href="#institutions" onClick={() => setIsMenuOpen(false)}>{t.nav.sl_safety}</a></li>
-                    <li><a href="#attacks" onClick={() => setIsMenuOpen(false)}>{t.nav.attacks}</a></li>
+                    <li><a href="#home" onClick={(e) => handleSmartClick(e, 'home')}>{t.nav.home}</a></li>
+                    <li><a href="#scams" onClick={(e) => handleSmartClick(e, 'scams')}>{t.nav.scams}</a></li>
+                    <li><a href="#institutions" onClick={(e) => handleSmartClick(e, 'institutions')}>{t.nav.sl_safety}</a></li>
+                    <li><a href="#attacks" onClick={(e) => handleSmartClick(e, 'attacks')}>{t.nav.attacks}</a></li>
                     <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
                 </ul>
                 <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -516,8 +528,8 @@ export default function Home() {
                         <h1 className="fade-in">{t.hero.title} <br /><span className="gradient-text">{t.hero.titleSpan}</span></h1>
                         <p className="subtitle fade-in-delay">{t.hero.subtitle}</p>
                         <div className="cta-group fade-in-delay-2">
-                            <a href="#scams" className="btn-main" style={{ textDecoration: 'none' }}>{t.hero.btn1}</a>
-                            <a href="#attacks" className="btn-secondary" style={{ textDecoration: 'none' }}>{t.nav.attacks}</a>
+                            <a href="#scams" className="btn-main" style={{ textDecoration: 'none' }} onClick={(e) => handleSmartClick(e, 'scams')}>{t.hero.btn1}</a>
+                            <a href="#attacks" className="btn-secondary" style={{ textDecoration: 'none' }} onClick={(e) => handleSmartClick(e, 'attacks')}>{t.nav.attacks}</a>
                         </div>
                     </div>
                     <div className="hero-image fade-in-delay-3">
@@ -546,14 +558,14 @@ export default function Home() {
                 <section id="scams" className="features">
                     <h2 className="section-title">{t.scamTypes.title} <span className="gradient-text">{t.scamTypes.titleSpan}</span></h2>
                     <div className="feature-grid">
-                        <div className="feature-card"><div className="icon-box"><Search className="gradient-text" size={40} /></div><h3>{t.scamTypes.phishing.title}</h3><p>{t.scamTypes.phishing.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><Download className="gradient-text" size={40} /></div><h3>{t.scamTypes.malwareSoftware.title}</h3><p>{t.scamTypes.malwareSoftware.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><Terminal className="gradient-text" size={40} /></div><h3>{t.scamTypes.hacking.title}</h3><p>{t.scamTypes.hacking.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p></div>
-                        <div className="feature-card"><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Search className="gradient-text" size={40} /></div><h3>{t.scamTypes.phishing.title}</h3><p>{t.scamTypes.phishing.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Download className="gradient-text" size={40} /></div><h3>{t.scamTypes.malwareSoftware.title}</h3><p>{t.scamTypes.malwareSoftware.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><Terminal className="gradient-text" size={40} /></div><h3>{t.scamTypes.hacking.title}</h3><p>{t.scamTypes.hacking.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p></div>
+                        <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p></div>
                     </div>
                 </section>
 
@@ -561,7 +573,7 @@ export default function Home() {
                     <h2 className="section-title">{t.malware.title} <span className="gradient-text">{t.malware.titleSpan}</span></h2>
                     <div className="feature-grid thin">
                         {Object.entries(t.malware).filter(([key]) => !['title', 'titleSpan'].includes(key)).map(([key, item]) => (
-                            <div className="feature-card small-pad" key={key}>
+                            <div className="feature-card small-pad" key={key} onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>
                                 <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', marginBottom: '0.5rem' }}>
                                     <Bug size={20} className="gradient-text" /><h4 style={{ margin: 0 }}>{item.title}</h4>
                                 </div>
@@ -574,23 +586,23 @@ export default function Home() {
                 <section id="institutions" className="features">
                     <h2 className="section-title">{t.sl_safety.title} <span className="gradient-text">{t.sl_safety.titleSpan}</span></h2>
                     <div className="institution-grid">
-                        <div className="glass-card inst-card"><ShieldHalf size={24} className="gradient-text" /><p>{t.sl_safety.cert}</p><ExternalLink size={16} className="ext-link" /></div>
-                        <div className="glass-card inst-card"><Cpu size={24} className="gradient-text" /><p>{t.sl_safety.icta}</p><ExternalLink size={16} className="ext-link" /></div>
-                        <div className="glass-card inst-card"><Activity size={24} className="gradient-text" /><p>{t.sl_safety.slp}</p><ExternalLink size={16} className="ext-link" /></div>
-                        <div className="glass-card inst-card"><Globe size={24} className="gradient-text" /><p>{t.sl_safety.trcsl}</p><ExternalLink size={16} className="ext-link" /></div>
+                        <div className="glass-card inst-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><ShieldHalf size={24} className="gradient-text" /><p>{t.sl_safety.cert}</p><ExternalLink size={16} className="ext-link" /></div>
+                        <div className="glass-card inst-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Cpu size={24} className="gradient-text" /><p>{t.sl_safety.icta}</p><ExternalLink size={16} className="ext-link" /></div>
+                        <div className="glass-card inst-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Activity size={24} className="gradient-text" /><p>{t.sl_safety.slp}</p><ExternalLink size={16} className="ext-link" /></div>
+                        <div className="glass-card inst-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Globe size={24} className="gradient-text" /><p>{t.sl_safety.trcsl}</p><ExternalLink size={16} className="ext-link" /></div>
                     </div>
                 </section>
 
                 <section id="attacks" className="features" style={{ background: 'rgba(255, 77, 77, 0.04)', paddingBottom: '8rem' }}>
                     <h2 className="section-title">{t.attacks.title} <span className="gradient-text" style={{ background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.attacks.titleSpan}</span></h2>
                     <div className="feature-grid thin">
-                        <div className="feature-card dark-accent"><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p></div>
-                        <div className="feature-card dark-accent"><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
-                        <div className="feature-card dark-accent"><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
+                        <div className="feature-card dark-accent" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
                     </div>
 
                     <div className="mission-container">
-                        <div className="glass-card mission-box fade-in-delay-3">
+                        <div className="glass-card mission-box fade-in-delay-3" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>
                             <UserX size={54} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
                             <h2 style={{ marginBottom: '1.5rem' }}>{t.mission.title}</h2>
                             <p style={{ opacity: 0.95, lineHeight: '2', fontSize: '1.15rem', fontWeight: '400' }}>
@@ -610,13 +622,13 @@ export default function Home() {
                     <div className="footer-nav">
                         <h4>Security Awareness</h4>
                         <ul>
-                            <li>Public Warning</li>
-                            <li>Report Scam</li>
-                            <li>SL Cyber Safety</li>
+                            <li onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>Public Warning</li>
+                            <li onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>Report Scam</li>
+                            <li onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>SL Cyber Safety</li>
                         </ul>
                     </div>
                 </div>
-                <p className="copyright">&copy; 2026 {t.footer.copyright}</p>
+                <p className="copyright" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}>&copy; 2026 {t.footer.copyright}</p>
             </footer>
 
             <style jsx>{`
