@@ -24,7 +24,9 @@ import {
     History,
     Shield,
     Gift,
-    Wifi
+    Wifi,
+    Menu,
+    X
 } from "lucide-react";
 
 const translations = {
@@ -32,10 +34,10 @@ const translations = {
         nav: {
             home: "මුල් පිටුව",
             scams: "වංචා වර්ග",
-            malware: "Malware දැනුම",
-            sl_safety: "ආරක්ෂක ආයතන",
-            attacks: "සයිබර් ප්‍රහාර",
-            report: "වාර්තා කරන්න"
+            malware: "Malware",
+            sl_safety: "ආයතන",
+            attacks: "ප්‍රහාර",
+            report: "වාර්තා"
         },
         hero: {
             title: "ඩිජිටල් වංචා වලින්",
@@ -81,6 +83,7 @@ const translations = {
             attack3: { title: "WhatsApp හයිජැක් (සජීවී)", desc: "ප්‍රසිද්ධ පුද්ගලයින්ගේ සහ සාමාන්‍ය වැසියන්ගේ WhatsApp ගිණුම් දහස් ගණනක් OTP හරහා පාලනයට ගැනීම." },
         },
         mission: {
+            title: "අපගේ අරමුණ සහ වගකීම",
             text: "verifiedhub.dpdns.org යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීම හා ඔබ නැවත මෙවැනි දේවල් වලට හසුනොවන ලෙස දැනුවත් කිරීමයි. මෙම වෙබ් අඩවියෙන් ඔබේ කිසිදු තොරතුරක් එක් රැස් කරනොගන්නා අතර හුදෙක් ඔබව දැනුවත් කිරීමට පමණක් මෙය යොදාගනී."
         },
         sl_safety: {
@@ -139,7 +142,7 @@ const translations = {
             bots: { title: "Bots & Botnets", desc: "Networks of infected computers used for cyber attacks." },
             hijacker: { title: "Browser Hijacker", desc: "Software that modifies web browser settings without permission." },
             hacker: { title: "Hackers", desc: "Individuals who gain unauthorized access to computer systems." },
-            spam: { title: "Spam", desc: "Bulk unwanted, often malicious messages sent via email or SMS." }
+            spam: { title: "Spam", desc: "Bulk unwanted, often malicious messages via email or SMS." }
         },
         attacks: {
             title: "Recent",
@@ -149,6 +152,7 @@ const translations = {
             attack3: { title: "WhatsApp Hijacking (Live)", desc: "Thousands of Sri Lankan accounts compromised daily through OTP manipulation." },
         },
         mission: {
+            title: "Our Mission & Responsibility",
             text: "verifiedhub.dpdns.org is an independent site maintained as a public service. Our sole purpose is to protect you from cyber thieves and educate you to prevent falling victim to such scams again. This website does not collect any of your information and is used solely for educational purposes."
         },
         sl_safety: {
@@ -168,7 +172,7 @@ const translations = {
         nav: {
             home: "முகப்பு",
             scams: "மோசடி",
-            malware: "மால்வேர்",
+            malware: "Malware",
             sl_safety: "நிறுவனங்கள்",
             attacks: "தாக்குதல்கள்",
             report: "புகார்"
@@ -188,7 +192,7 @@ const translations = {
             high: "அதிகம்"
         },
         scamTypes: {
-            title: "டிජිටල්",
+            title: "ඩිජිටල්",
             titleSpan: "மோசடிகள்",
             phishing: { title: "பிஷிங் (Phishing)", desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்." },
             whatsapp: { title: "வாட்ஸ்அப் மோசடி", desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) க்காக பணம் கேட்கும் மோசடிகள்." },
@@ -217,6 +221,7 @@ const translations = {
             attack3: { title: "வாட்ஸ்அප් හෑක්", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
         },
         mission: {
+            title: "අපගේ අරමුණ සහ වගකීම",
             text: "verifiedhub.dpdns.org என்பது பொதுச் சேவையாகப் பராமரிக்கப்படும் ஒரு சுயாதீன தளமாகும். சைபர் திருடர்களிடமிருந்து உங்களைப் பாதுகாப்பதும், இதுபோன்ற மோசடிகளுக்கு நீங்கள் மீண்டும் பலியாகாமல் இருக்க உங்களுக்குக் கற்பிப்பதும் எங்களின் ஒரே நோக்கமாகும். இந்த இணையதளம் உங்கள் தகவல்களைச் சேகரிக்காது மற்றும் கல்வி நோக்கங்களுக்காக மட்டுமே பயன்படுத்தப்படுகிறது."
         },
         sl_safety: {
@@ -228,7 +233,7 @@ const translations = {
             trcsl: "TRCSL - ஒழுங்குமுறை ஆணைக்குழு"
         },
         footer: {
-            desc: "தன்னார்ව சமூக சேவை. உங்கள் பாதுகாப்பு எமது இலக்கு.",
+            desc: "தன்னார்வ சமூக சேவை. உங்கள் பாதுகாப்பு எமது இலக்கு.",
             copyright: "Verified Hub Collective. ஒருவரை ஒருவர் பாதுகாப்போம்."
         }
     }
@@ -237,6 +242,7 @@ const translations = {
 export default function Home() {
     const [lang, setLang] = useState(null);
     const [mounted, setMounted] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const heroCardRef = useRef(null);
 
     useEffect(() => {
@@ -248,14 +254,15 @@ export default function Home() {
     const selectLanguage = (l) => {
         setLang(l);
         localStorage.setItem("user-lang", l);
+        setIsMenuOpen(false);
     };
 
     useEffect(() => {
         if (!lang) return;
         const handleMouseMove = (e) => {
-            if (!heroCardRef.current) return;
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
+            if (!heroCardRef.current || window.innerWidth < 768) return;
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
             heroCardRef.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
         };
         document.addEventListener("mousemove", handleMouseMove);
@@ -286,23 +293,34 @@ export default function Home() {
 
     const t = translations[lang];
 
+    const closeMenu = () => setIsMenuOpen(false);
+
     return (
         <>
             <nav suppressHydrationWarning>
                 <div className="logo"><span className="gradient-text">Verified</span><span>Hub</span></div>
-                <ul className="nav-links">
-                    <li><a href="#home">{t.nav.home}</a></li>
-                    <li><a href="#scams">{t.nav.scams}</a></li>
-                    <li><a href="#attacks">{t.nav.attacks}</a></li>
-                    <li><a href="#institutions">{t.nav.sl_safety}</a></li>
-                    <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
+
+                {/* Desktop Nav */}
+                <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+                    <li><a href="#home" onClick={closeMenu}>{t.nav.home}</a></li>
+                    <li><a href="#scams" onClick={closeMenu}>{t.nav.scams}</a></li>
+                    <li><a href="#institutions" onClick={closeMenu}>{t.nav.sl_safety}</a></li>
+                    <li><a href="#attacks" onClick={closeMenu}>{t.nav.attacks}</a></li>
+                    <li><button onClick={() => selectLanguage(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
                 </ul>
+
+                {/* Mobile Toggle */}
+                <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </div>
             </nav>
 
-            {/* Mobile Lang FAB */}
-            <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn" style={{ padding: '0.8rem 1.2rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-                <Globe size={20} /> {lang.toUpperCase()}
-            </button>
+            {/* Mobile Lang FAB (Hidden when menu open) */}
+            {!isMenuOpen && (
+                <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn">
+                    <Globe size={20} /> {lang.toUpperCase()}
+                </button>
+            )}
 
             <main suppressHydrationWarning>
                 <section className="hero" id="home">
@@ -320,12 +338,18 @@ export default function Home() {
                                 <div className="alert-glow"><ShieldAlert size={32} strokeWidth={2} color="white" /></div>
                                 <div className="header-text">
                                     <h3>{t.threatAlert.today}</h3>
-                                    <p style={{ color: '#ff4d4d' }}>{t.threatAlert.subtitle}</p>
+                                    <p style={{ color: '#ff4d4d', margin: 0 }}>{t.threatAlert.subtitle}</p>
                                 </div>
                             </div>
-                            <div className="stats">
-                                <div className="stat-item"><span>{t.threatAlert.today}</span><strong>1,640+</strong></div>
-                                <div className="stat-item"><span>{t.threatAlert.risk}</span><strong style={{ color: '#ff4d4d' }}>{t.threatAlert.high}</strong></div>
+                            <div className="stats" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between' }}>
+                                <div className="stat-item">
+                                    <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>{t.threatAlert.today}</span>
+                                    <div style={{ fontSize: '1.4rem', fontWeight: 800 }}>1,640+</div>
+                                </div>
+                                <div className="stat-item" style={{ textAlign: 'right' }}>
+                                    <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>{t.threatAlert.risk}</span>
+                                    <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ff4d4d' }}>{t.threatAlert.high}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -343,24 +367,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section id="attacks" className="features" style={{ background: 'rgba(255, 77, 77, 0.03)' }}>
-                    <h2 className="section-title">{t.attacks.title} <span className="gradient-text" style={{ background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.attacks.titleSpan}</span></h2>
-                    <div className="feature-grid thin">
-                        <div className="feature-card dark-accent"><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p></div>
-                        <div className="feature-card dark-accent"><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
-                        <div className="feature-card dark-accent"><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
-                    </div>
-
-                    {/* Mission Statement at bottom of Attacks section */}
-                    <div className="glass-card" style={{ maxWidth: '900px', margin: '4rem auto 0', textAlign: 'center', borderRadius: '40px', border: '1px solid rgba(0, 242, 254, 0.2)' }}>
-                        <UserX size={48} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
-                        <h2 style={{ marginBottom: '1.5rem' }}>{lang === 'si' ? 'අපගේ අරමුණ සහ වගකීම' : 'Our Mission & Responsibility'}</h2>
-                        <p style={{ opacity: 0.95, lineHeight: '1.9', fontSize: '1.1rem', fontWeight: '400' }}>
-                            {t.mission.text}
-                        </p>
-                    </div>
-                </section>
-
                 <section id="malware" className="features" style={{ background: 'rgba(0, 242, 254, 0.03)' }}>
                     <h2 className="section-title">{t.malware.title} <span className="gradient-text">{t.malware.titleSpan}</span></h2>
                     <div className="feature-grid thin">
@@ -375,6 +381,7 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Institutions Section - Moved UP */}
                 <section id="institutions" className="features">
                     <h2 className="section-title">{t.sl_safety.title} <span className="gradient-text">{t.sl_safety.titleSpan}</span></h2>
                     <div className="institution-list">
@@ -384,15 +391,69 @@ export default function Home() {
                         <div className="glass-card inst-card"><Globe size={24} className="gradient-text" /><p>{t.sl_safety.trcsl}</p><ExternalLink size={16} className="ext-link" /></div>
                     </div>
                 </section>
+
+                {/* Attacks Section - Moved AFTER Institutions */}
+                <section id="attacks" className="features" style={{ background: 'rgba(255, 77, 77, 0.04)', paddingBottom: '8rem' }}>
+                    <h2 className="section-title">{t.attacks.title} <span className="gradient-text" style={{ background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.attacks.titleSpan}</span></h2>
+                    <div className="feature-grid thin">
+                        <div className="feature-card dark-accent"><History className="gradient-text" size={32} /><h4>{t.attacks.attack1.title}</h4><p>{t.attacks.attack1.desc}</p></div>
+                        <div className="feature-card dark-accent"><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
+                        <div className="feature-card dark-accent"><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
+                    </div>
+
+                    {/* Mission Statement at long bottom of everything, now inside/after Attacks section */}
+                    <div className="glass-card mission-box fade-in-delay-3" style={{ maxWidth: '900px', margin: '6rem auto 0', textAlign: 'center', borderRadius: '40px', border: '1px solid rgba(0, 242, 254, 0.2)', padding: '3rem 2rem' }}>
+                        <UserX size={54} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
+                        <h2 style={{ marginBottom: '1.5rem' }}>{t.mission.title}</h2>
+                        <p style={{ opacity: 0.95, lineHeight: '2', fontSize: '1.15rem', fontWeight: '400' }}>
+                            {t.mission.text}
+                        </p>
+                    </div>
+                </section>
+
             </main>
 
             <footer>
-                <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', textAlign: 'left', marginBottom: '4rem' }}>
-                    <div style={{ flex: 1, minWidth: '200px' }}><h3 className="logo"><span className="gradient-text">Verified</span>Hub</h3><p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>{t.footer.desc}</p></div>
-                    <div style={{ flex: 1, minWidth: '150px' }}><h4>Security Awareness</h4><ul style={{ listStyle: 'none', marginTop: '1rem', color: 'var(--text-secondary)', lineHeight: '2' }}><li>Public Warning</li><li>Report Scam</li><li>SL Cyber Safety</li></ul></div>
+                <div className="footer-content">
+                    <div className="footer-info">
+                        <h3 className="logo"><span className="gradient-text">Verified</span>Hub</h3>
+                        <p>{t.footer.desc}</p>
+                    </div>
+                    <div className="footer-nav">
+                        <h4>Security Awareness</h4>
+                        <ul>
+                            <li>Public Warning</li>
+                            <li>Report Scam</li>
+                            <li>SL Cyber Safety</li>
+                        </ul>
+                    </div>
                 </div>
-                <p style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '2rem', fontSize: '0.8rem', opacity: 0.6 }}>&copy; 2026 {t.footer.copyright}</p>
+                <p className="copyright">&copy; 2026 {t.footer.copyright}</p>
             </footer>
+
+            <style jsx>{`
+        .mobile-toggle { display: none; cursor: pointer; color: white; }
+        
+        @media (max-width: 968px) {
+            .mobile-toggle { display: block; z-index: 1001; }
+            .nav-links {
+                position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+                background: #000; flex-direction: column; justify-content: center;
+                transform: translateX(100%); transition: 0.4s ease;
+            }
+            .nav-links.active { transform: translateX(0); }
+            .hero { padding-top: 2rem; }
+            h1 { font-size: 2.5rem; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+
+        .mission-box { background: rgba(5,5,5,0.4); backdrop-filter: blur(10px); }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; text-align: left; margin-bottom: 4rem; padding: 0 10%; }
+        .footer-info { flex: 1; min-width: 200px; }
+        .footer-nav { flex: 1; min-width: 150px; }
+        .footer-nav ul { list-style: none; margin-top: 1rem; color: var(--text-secondary); line-height: 2; }
+        .copyright { border-top: 1px solid var(--glass-border); padding: 2rem 10%; font-size: 0.8rem; opacity: 0.6; text-align: center; }
+      `}</style>
         </>
     );
 }
