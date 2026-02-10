@@ -419,3 +419,247 @@ h1 {
         gap: 0.8rem;
     }
 }
+
+/* Scam Simulator Styles */
+.promo-full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 999998;
+    overflow-y: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.promo-card {
+    background: linear-gradient(135deg, #1a1c2c 0%, #4a192c 100%);
+    border: 3px solid #f9cb28;
+    border-radius: 40px;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+.promo-badge {
+    background: #f9cb28;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.promo-title {
+    font-size: 3rem;
+    font-weight: 950;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.promo-subtitle {
+    font-size: 1.3rem;
+    color: #f9cb28;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.input-container {
+    max-width: 450px;
+    margin: 0 auto 2.5rem;
+}
+
+.promo-input {
+    width: 100%;
+    padding: 1.4rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.promo-input:focus {
+    border-color: #f9cb28;
+    box-shadow: 0 0 20px rgba(249, 203, 40, 0.2);
+}
+
+.progress-wrapper {
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+.progress-status {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.progress-bar-container {
+    height: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f9cb28, #ff4d4d);
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.whatsapp-share-btn {
+    background: #25D366;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 20px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-share-btn:active {
+    transform: scale(0.96);
+}
+
+.claim-btn {
+    background: linear-gradient(90deg, #f9cb28, #ff8c00);
+    color: #000;
+}
+
+.shock-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: intenseShake 0.1s infinite;
+}
+
+@keyframes intenseShake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(12px, 12px);
+    }
+
+    50% {
+        transform: translate(-12px, 0);
+    }
+
+    75% {
+        transform: translate(0, -12px);
+    }
+
+    100% {
+        transform: translate(12px, 0);
+    }
+}
+
+.shock-content {
+    max-width: 900px;
+    padding: 3rem;
+}
+
+.shock-title {
+    font-size: 6rem;
+    color: #ff4d4d;
+    font-weight: 950;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 50px rgba(255, 77, 77, 1);
+}
+
+.shock-message {
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.shock-timer {
+    font-size: 1.1rem;
+    opacity: 0.6;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .promo-title {
+        font-size: 2rem;
+    }
+
+    .shock-title {
+        font-size: 3.5rem;
+    }
+
+    .shock-message {
+        font-size: 1.3rem;
+    }
+
+    .promo-card {
+        padding: 3rem 1.5rem;
+    }
+}

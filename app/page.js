@@ -3,23 +3,19 @@
 import { useState, useEffect, useRef } from "react";
 import {
     ShieldAlert,
-    ShieldCheck,
     Search,
     AlertTriangle,
     TrendingUp,
     Globe,
-    CheckCircle2,
     UserX,
     MessageCircle,
     AlertCircle,
     Zap,
     Bug,
-    Ghost,
     Cpu,
     ShieldHalf,
     ExternalLink,
     Lock,
-    Eye,
     Activity,
     History,
     Shield,
@@ -28,11 +24,31 @@ import {
     Menu,
     X,
     Terminal,
-    Download
+    Download,
+    Phone,
+    Share2
 } from "lucide-react";
 
 const translations = {
     si: {
+        sim: {
+            badge: "T20 World Cup - ශ්‍රී ලංකා විශේෂ දීමනාව",
+            title: "නොමිලේ 15GB දත්ත ලබාගන්න",
+            subtitle: "Dialog, Mobitel, Hutch සහ Airtel පාරිභෝගිකයන් සඳහා පමණයි",
+            inputPlaceholder: "ඔබගේ දුරකථන අංකය ඇතුළත් කරන්න (Ex: 07x xxxxxxx)",
+            btnNext: "සක්‍රීය කරන්න",
+            shareMsg: "ඔබේ දත්ත පැකේජය ලබාගැනීමට පහත පියවර සම්පූර්ණ කරන්න",
+            step0: "මෙම පණිවිඩය WhatsApp මිතුරන් 20 දෙනෙකුට හෝ Group 5කට Share කළ යුතුය",
+            step1: "මෙම පණිවිඩය WhatsApp මිතුරන් 15 දෙනෙකුට හෝ Group 4කට Share කළ යුතුය",
+            step2: "මෙම පණිවිඩය WhatsApp මිතුරන් 10 දෙනෙකුට හෝ Group 2කට Share කළ යුතුය",
+            step3: "මෙම පණිවිඩය WhatsApp මිතුරන් 5 දෙනෙකුට හෝ Group 1කට Share කළ යුතුය",
+            step4: "සෑම පියවරක්ම සාර්ථකයි! ඔබගේ 15GB පැකේජය දැන් ලබාගන්න",
+            btnShare: "WhatsApp හරහා Share කරන්න",
+            btnClaim: "15GB සක්‍රීය කරන්න",
+            shockTitle: "නතර වන්න! (STOP!)",
+            shockMsg: "ඔබ දැන් සිදු කළේ සැබෑ වංචාවකදී සිදුවන ක්‍රියාවලියමයි. මෙලෙස Share කිරීම හරහා ඔබ ඔබගේ මිතුරන්වද මෙවැනි අනතුරු වලට නිරාවරණය කරනවා. මින් බේරෙන්න පහත තොරතුරු හොඳින් කියවන්න.",
+            redirecting: "අත්‍යවශ්‍ය තොරතුරු වෙත යොමු කෙරේ..."
+        },
         nav: {
             home: "මුල් පිටුව",
             scams: "වංචා වර්ග",
@@ -80,7 +96,7 @@ const translations = {
             spam: { title: "Spam", desc: "විශාල වශයෙන් එවන කරදරකාරී සහ හානිකර පණිවිඩ." }
         },
         attacks: {
-            title: "ලංකාවේ සිදුවූ",
+            title: "ලංකා‍වේ සිදුවූ",
             titleSpan: "මෑතකාලීන සයිබර් ප්‍රහාර",
             attack1: { title: "Gov.lk දත්ත නැතිවීම (2023)", desc: "රජයේ විද්‍යුත් තැපැල් (Gov.lk) පද්ධතියට එල්ල වූ ප්‍රහාරයකින් දත්ත විශාල ප්‍රමාණයක් ස්ථිරවම විනාශ විය." },
             attack2: { title: "බැංකු SMS වංචා (2024)", desc: "ලංකාවේ ප්‍රධාන බැංකු වල නමින් ව්‍යාජ SMS එවා ගිණුම් වල මුදල් සොරකම් කිරීමේ විශාල රැල්ලක් ඇති විය." },
@@ -104,6 +120,24 @@ const translations = {
         }
     },
     en: {
+        sim: {
+            badge: "T20 World Cup - Sri Lanka Special Offer",
+            title: "Claim Your Free 15GB Data",
+            subtitle: "Exclusive for Dialog, Mobitel, Hutch & Airtel users",
+            inputPlaceholder: "Enter your phone number (Ex: 07x xxxxxxx)",
+            btnNext: "Activate Now",
+            shareMsg: "Complete the steps below to claim your data pack",
+            step0: "Share this message with 20 friends or 5 Groups on WhatsApp",
+            step1: "Share this message with 15 more friends or 4 Groups on WhatsApp",
+            step2: "Share this message with 10 more friends or 2 Groups on WhatsApp",
+            step3: "Share this message with 5 more friends or 1 Group on WhatsApp",
+            step4: "All steps complete! Click below to claim your 15GB",
+            btnShare: "Share on WhatsApp",
+            btnClaim: "Get 15GB Data Now",
+            shockTitle: "STOP! Access Denied",
+            shockMsg: "You just experienced exactly how a real digital scam works. By sharing this, you might have compromised your friends' safety too. Read below to learn how to keep yourself protected.",
+            redirecting: "Redirecting to safety information..."
+        },
         nav: {
             home: "Home",
             scams: "Scams",
@@ -175,6 +209,20 @@ const translations = {
         }
     },
     ta: {
+        sim: {
+            badge: "T20 World Cup - ශ්‍රී ලංකා විශේෂ දීමනාව",
+            title: "නොමිලේ 15GB දත්ත ලබාගන්න",
+            subtitle: "Dialog, Mobitel, Hutch සහ Airtel පාරිභෝගිකයන් සඳහා පමණයි",
+            inputPlaceholder: "සංඛ්යාව ඇතුළත් කරන්න",
+            btnNext: "සක්‍රීය කරන්න",
+            shareMsg: "පියවර සම්පූර්ණ කරන්න",
+            step0: "Share with 20 friends on WhatsApp",
+            btnShare: "WhatsApp Share",
+            btnClaim: "Get 15GB",
+            shockTitle: "STOP!",
+            shockMsg: "You were just scammed!",
+            redirecting: "Redirecting..."
+        },
         nav: {
             home: "முகப்பு",
             scams: "மோசடி",
@@ -186,7 +234,7 @@ const translations = {
         hero: {
             title: "ඩිජිටල් மோசடிகளில்",
             titleSpan: "இருந்து பாதுகாப்பாக இருங்கள்",
-            subtitle: "இலங்கையில் நடந்த இணைய மோசடிகள், வைரஸ்கள் மற்றும் தரவு திருட்டு பற்றிய முழுமையான தகவல்கள் இங்கே.",
+            subtitle: "ඉලங்கையில் நடந்த இணைய மோசடிகள், வைரஸ்கள் மற்றும் தரவு திருட்டு பற்றிய முழுமையான தகவல்கள் இங்கே.",
             btn1: "மோசඩிகள்",
             btn2: "பாதுகாப்பு පියවර"
         },
@@ -212,25 +260,25 @@ const translations = {
         malware: {
             title: "மால்வேர்",
             titleSpan: "விளக்கம்",
-            virus: { title: "கணினி வைரஸ்", desc: "கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியீடுகள்." },
+            virus: { title: "கணினி வைரஸ்", desc: "கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியීடுகள்." },
             worms: { title: "வோர்ම්ස් (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவும் வைரஸ்கள்." },
             spyware: { title: "ஸ்பைவேர்", desc: "உங்கள் தகவல்களைத் திருடும் மென்பொருள்." },
             adware: { title: "அட்வேர்", desc: "தேவையற்ற விளம்பரங்களைக் காட்டும் மென்பொருள்." },
             bots: { title: "பாட்கள் (Bots)", desc: "தாக்குதல்களை நடத்தப் பயன்படுத்தப்படும் கணினிகள்." },
-            hijacker: { title: "உலவி கடத்தல்", desc: "உலவி அமைப்புகளை மாற்றும் மென்பொருள்." },
-            hacker: { title: "ஹேக்கர்கள்", desc: "அனுமதியின்றி கணினிக்குள் நுழையும் நபர்கள்." },
-            spam: { title: "ஸ்பேම් (Spam)", desc: "பெருமளவில் வரும் தேவையற்ற செய்திகள்." }
+            hijacker: { title: "உලවි கடத்தல்", desc: "உලවි அமைப்புகளை மாற்றும் மென்பொருள்." },
+            hacker: { title: "ஹேக்கர்கள்", desc: "அனுමதியின்றி கணினிக்குள் நுழையும் நபர்கள்." },
+            spam: { title: "ஸ்பේම් (Spam)", desc: "பெருமளவில் வரும் தேவையற்ற செய்திகள்." }
         },
         attacks: {
             title: "இலங்கையில்",
             titleSpan: "நடந்த தாக்குதல்கள்",
-            attack1: { title: "Gov.lk தரவு இழப்பு", desc: "அரசு மின்னஞ்சல் அமைப்பில் ஏற்பட்ட தாக்குதலால் தரவுகள் திருடப்பட்டன." },
-            attack2: { title: "வங்கி எஸ்.எம்.எஸ்", desc: "வங்கிப் பெயரில் வரும் போலியான எஸ்.எம்.எஸ் மூலம் பணம் திருடுதல்." },
+            attack1: { title: "Gov.lk தரவு இழப்பு", desc: "அரசு மின்னஞ்சல் அமைப்பில் ஏற்பட்ட தாக்குதலால் තරவுகள் திருடப்பட்டன." },
+            attack2: { title: "வங்கி எஸ்.எம்.எஸ்", desc: "වங்கிப் பெயரில் வரும் போலியான எஸ்.எம்.எஸ் மூலம் பணம் திருடுதல்." },
             attack3: { title: "வாட்ஸ்அප් හෑක්", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
         },
         mission: {
             title: "අපගේ අරමුණ සහ වගකීම",
-            text: "verifiedhub.dpdns.org என்பது பொதுச் சேவையாகப் பராமரிக்கப்படும் ஒரு சுயாதீன தளமாகும். சைபர் திருடர்களிடமிருந்து உங்களைப் பாதுகாப்பதும், இதுபோன்ற மோசடிகளுக்கு நீங்கள் மீண்டும் பலியாகாமல் இருக்க உங்களுக்குக் கற்பிப்பதும் எங்களின் ஒரே நோக்கமாகும். இந்த இணையதளம் உங்கள் தகவல்களைச் சேகரிக்காது மற்றும் கல்வி நோக்கங்களுக்காக மட்டுமே பயன்படுத்தப்படுகிறது."
+            text: "verifiedhub.dpdns.org යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීම හා ඔබ නැවත මෙවැනි දේවල් වලට හසුනොවන ලෙස දැනුවත් කිරීමයි. මෙම වෙබ් අඩවියෙන් ඔබේ කිසිදු තොරතුරක් එක් රැස් කරනොගන්නා අතර හුදෙක් ඔබව දැනුවත් කිරීමට පමණක් මෙය යොදාගනී."
         },
         sl_safety: {
             title: "இலங்கை பாதுகாப்பு",
@@ -251,12 +299,24 @@ export default function Home() {
     const [lang, setLang] = useState(null);
     const [mounted, setMounted] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Simulator States
+    const [isSimActive, setIsSimActive] = useState(true);
+    const [simStep, setSimStep] = useState(0); // 0: Input, 1-4: Progress, 5: Claimed
+    const [progress, setProgress] = useState(0);
+    const [showShock, setShowShock] = useState(false);
+    const [phone, setPhone] = useState("");
+
     const heroCardRef = useRef(null);
 
     useEffect(() => {
         setMounted(true);
         const savedLang = localStorage.getItem("user-lang");
         if (savedLang) setLang(savedLang);
+
+        // Check if simulation was already completed in this session
+        const simDone = sessionStorage.getItem("sim-completed");
+        if (simDone) setIsSimActive(false);
     }, []);
 
     const selectLanguage = (l) => {
@@ -265,8 +325,38 @@ export default function Home() {
         setIsMenuOpen(false);
     };
 
+    const handleSimNext = () => {
+        if (phone.length >= 9) setSimStep(1);
+    };
+
+    const handleShareClick = () => {
+        const nextProgress = progress + 25;
+        setProgress(nextProgress);
+        if (nextProgress === 100) {
+            setSimStep(5);
+        } else {
+            setSimStep(simStep + 1);
+        }
+        // Simulation: Open dummy WhatsApp link
+        window.open("https://api.whatsapp.com/send?text=Get%20Free%2015GB%20Data%20for%20T20%20World%20Cup!%20Click%20here:%20https://verifiedhub.dpdns.org", "_blank");
+    };
+
+    const handleClaim = () => {
+        setShowShock(true);
+        setTimeout(() => {
+            setShowShock(false);
+            setIsSimActive(false);
+            sessionStorage.setItem("sim-completed", "true");
+            // Scroll to articles section
+            setTimeout(() => {
+                const scamsSection = document.getElementById('scams');
+                if (scamsSection) scamsSection.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }, 4000); // 4 seconds as requested
+    };
+
     useEffect(() => {
-        if (!lang) return;
+        if (!lang || isSimActive) return;
         const handleMouseMove = (e) => {
             if (!heroCardRef.current || window.innerWidth < 768) return;
             const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
@@ -275,7 +365,7 @@ export default function Home() {
         };
         document.addEventListener("mousemove", handleMouseMove);
         return () => document.removeEventListener("mousemove", handleMouseMove);
-    }, [lang]);
+    }, [lang, isSimActive]);
 
     if (!mounted) return null;
 
@@ -301,6 +391,82 @@ export default function Home() {
 
     const t = translations[lang];
 
+    // SCAM SIMULATOR UI
+    if (isSimActive) {
+        return (
+            <div className="promo-full-screen">
+                {showShock && (
+                    <div className="shock-overlay">
+                        <div className="shock-content">
+                            <ShieldAlert size={100} color="#ff4d4d" style={{ marginBottom: '2rem' }} />
+                            <h1 className="shock-title">{t.sim.shockTitle}</h1>
+                            <p className="shock-message">{t.sim.shockMsg}</p>
+                            <div className="shock-timer">
+                                <Zap size={20} style={{ display: 'inline', marginRight: '10px' }} />
+                                {t.sim.redirecting}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                <div className="promo-container">
+                    <div className="promo-card fade-in">
+                        <div className="promo-badge">{t.sim.badge}</div>
+                        <h1 className="promo-title">{t.sim.title}</h1>
+                        <p className="promo-subtitle">{t.sim.subtitle}</p>
+
+                        {simStep === 0 ? (
+                            <div className="fade-in">
+                                <div className="input-container">
+                                    <input
+                                        type="tel"
+                                        className="promo-input"
+                                        placeholder={t.sim.inputPlaceholder}
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                    />
+                                </div>
+                                <button className="whatsapp-share-btn claim-btn" onClick={handleSimNext}>
+                                    {t.sim.btnNext} <Zap size={20} />
+                                </button>
+                            </div>
+                        ) : (
+                            <div className="fade-in">
+                                <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>{t.sim.shareMsg}</p>
+                                <div className="progress-wrapper">
+                                    <div className="progress-status">
+                                        {progress === 0 && t.sim.step0}
+                                        {progress === 25 && t.sim.step1}
+                                        {progress === 50 && t.sim.step2}
+                                        {progress === 75 && t.sim.step3}
+                                        {progress === 100 && t.sim.step4}
+                                    </div>
+                                    <div className="progress-bar-container">
+                                        <div className="progress-bar-fill" style={{ width: `${progress}%` }}></div>
+                                    </div>
+
+                                    {progress < 100 ? (
+                                        <button className="whatsapp-share-btn" onClick={handleShareClick}>
+                                            <MessageCircle size={24} /> {t.sim.btnShare}
+                                        </button>
+                                    ) : (
+                                        <button className="whatsapp-share-btn claim-btn" onClick={handleClaim}>
+                                            <CheckCircle2 size={24} /> {t.sim.btnClaim}
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                        <div style={{ marginTop: '2rem', fontSize: '0.8rem', opacity: 0.4 }}>
+                            &copy; 2026 ICC T20 Promotions Management
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // MAIN WEBSITE CONTENT (Visible after simulation)
     return (
         <>
             <nav suppressHydrationWarning>
