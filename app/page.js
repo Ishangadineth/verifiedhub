@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Script from "next/script";
 import {
     ShieldAlert,
     Search,
@@ -383,7 +384,7 @@ export default function Home() {
 
     const handleSmartClick = (e, targetId) => {
         if (e) e.preventDefault();
-        window.open("https://www.effectivegatecpm.com/ymh3n934?key=e50d8ade02e0bbee1d086db312fed98b", "_blank");
+        window.open("https://www.effectivegatecpm.com/k0bxmce5p?key=2a9fe1baf5a313bb98fb6904b88a41f1", "_blank");
         if (targetId) {
             const element = document.getElementById(targetId.replace('#', ''));
             if (element) {
@@ -584,6 +585,16 @@ export default function Home() {
                         <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
                         <div className="feature-card" onClick={(e) => handleSmartClick(e)} style={{ cursor: 'pointer' }}><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p><span className="read-more-link">{t.nav.readMore}</span></div>
                     </div>
+                </section>
+
+                <section className="ad-section-native" style={{ padding: '2rem 10%', display: 'flex', justifyContent: 'center' }}>
+                    <Script
+                        async="async"
+                        data-cfasync="false"
+                        src="https://pl28691373.effectivegatecpm.com/735e7acf03202f43e88a6f22df2ec71e/invoke.js"
+                        strategy="afterInteractive"
+                    />
+                    <div id="container-735e7acf03202f43e88a6f22df2ec71e" style={{ width: '100%', minHeight: '250px' }}></div>
                 </section>
 
                 <section id="malware" className="features" style={{ background: 'rgba(0, 242, 254, 0.03)' }}>
