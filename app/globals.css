@@ -293,7 +293,12 @@ h1 {
     background: linear-gradient(135deg, #ff4d4d, #f9cb28);
     box-shadow: 0 0 30px rgba(255, 77, 77, 0.4);
     border-radius: 50%;
-    padding: 12px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .section-title {
