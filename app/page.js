@@ -47,6 +47,7 @@ const translations = {
             btnShare: "WhatsApp හරහා Share කරන්න",
             btnClaim: "15GB සක්‍රීය කරන්න",
             errorNum: "කරුණාකර නිවැරදි දුරකථන අංකයක් ඇතුළත් කරන්න",
+            verifying: "පහිරුව පරීක්ෂා කරමින්...",
             shockTitle: "නතර වන්න! (STOP!)",
             shockMsg: "ඔබ දැන් සිදු කළේ සැබෑ වංචාවකදී සිදුවන ක්‍රියාවලියමයි. මෙලෙස Share කිරීම හරහා ඔබ ඔබගේ මිතුරන්වද මෙවැනි අනතුරු වලට නිරාවරණය කරනවා. මින් බේරෙන්න පහත තොරතුරු හොඳින් කියවන්න.",
             redirecting: "අත්‍යවශ්‍ය තොරතුරු වෙත යොමු කෙරේ..."
@@ -137,6 +138,7 @@ const translations = {
             btnShare: "Share on WhatsApp",
             btnClaim: "Get 15GB Data Now",
             errorNum: "Please enter a valid phone number",
+            verifying: "Verifying your share...",
             shockTitle: "STOP! Access Denied",
             shockMsg: "You just experienced exactly how a real digital scam works. By sharing this, you might have compromised your friends' safety too. Read below to learn how to keep yourself protected.",
             redirecting: "Redirecting to safety information..."
@@ -227,6 +229,7 @@ const translations = {
             btnShare: "WhatsApp இல் பகிரவும்",
             btnClaim: "15GB ஐச் செயல்படுத்தவும்",
             errorNum: "தயவுசெய்து சரியான தொலைபேசி எண்ணை உள்ளிடவும்",
+            verifying: "பகிர்வை சரிබලக்கிறது...",
             shockTitle: "நில்லுங்கள்! (STOP!)",
             shockMsg: "ஒரு உண்மையான இணைய மோசடியில் நடக்கும் அதே செயல்முறையைத்தான் நீங்கள் இப்போது செய்தீர்கள். இவ்வாறு பகிரும் மூலம் உங்கள் நண்பர்களையும் நீங்கள் ஆபத்தில் தள்ளுகிறீர்கள். இதிலிருந்து தப்பிக்க கீழுள்ள தகவல்களைத் தெளிவாக வாசிக்கவும்.",
             redirecting: "முக்கிய தகவல்களுக்கு அழைத்துச் செல்லப்படுகிறது..."
@@ -315,6 +318,7 @@ export default function Home() {
     const [showShock, setShowShock] = useState(false);
     const [phone, setPhone] = useState("");
     const [simError, setSimError] = useState(false);
+    const [isSharing, setIsSharing] = useState(false);
 
     const heroCardRef = useRef(null);
 
@@ -345,16 +349,23 @@ export default function Home() {
     };
 
     const handleShareClick = () => {
-        const nextProgress = progress + 25;
-        setProgress(nextProgress);
-        if (nextProgress === 100) {
-            setSimStep(5);
-        } else {
-            setSimStep(simStep + 1);
-        }
         // Simulation: Open dummy WhatsApp link (using protocol for direct app opening)
         const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
         window.location.href = `whatsapp://send?text=${text}`;
+
+        setIsSharing(true);
+
+        // Delay to update progress (Using 3 seconds for better UX, can be 180000 for 3 min)
+        setTimeout(() => {
+            const nextProgress = progress + 25;
+            setProgress(nextProgress);
+            if (nextProgress === 100) {
+                setSimStep(5);
+            } else {
+                setSimStep(simStep + 1);
+            }
+            setIsSharing(false);
+        }, 3000);
     };
 
     const handleClaim = () => {
@@ -479,9 +490,16 @@ export default function Home() {
                                     </div>
 
                                     {progress < 100 ? (
-                                        <button className="whatsapp-share-btn" onClick={handleShareClick}>
-                                            <MessageCircle size={24} /> {t.sim.btnShare}
-                                        </button>
+                                        isSharing ? (
+                                            <div className="verifying-container fade-in" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: 'rgba(37, 211, 102, 0.1)', borderRadius: '12px', border: '1px dashed #25D366' }}>
+                                                <Activity className="spin" size={24} color="#25D366" />
+                                                <span style={{ marginLeft: '10px', color: '#25D366', fontWeight: 'bold' }}>{t.sim.verifying}</span>
+                                            </div>
+                                        ) : (
+                                            <button className="whatsapp-share-btn" onClick={handleShareClick}>
+                                                <MessageCircle size={24} /> {t.sim.btnShare}
+                                            </button>
+                                        )
                                     ) : (
                                         <button className="whatsapp-share-btn claim-btn" onClick={handleClaim}>
                                             <CheckCircle2 size={24} /> {t.sim.btnClaim}
