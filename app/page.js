@@ -80,6 +80,9 @@ const translations = {
             attack2: { title: "බැංකු SMS වංචා (2024)", desc: "ලංකාවේ ප්‍රධාන බැංකු වල නමින් ව්‍යාජ SMS එවා ගිණුම් වල මුදල් සොරකම් කිරීමේ විශාල රැල්ලක් ඇති විය." },
             attack3: { title: "WhatsApp හයිජැක් (සජීවී)", desc: "ප්‍රසිද්ධ පුද්ගලයින්ගේ සහ සාමාන්‍ය වැසියන්ගේ WhatsApp ගිණුම් දහස් ගණනක් OTP හරහා පාලනයට ගැනීම." },
         },
+        mission: {
+            text: "verifiedhub.dpdns.org යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීම හා ඔබ නැවත මෙවැනි දේවල් වලට හසුනොවන ලෙස දැනුවත් කිරීමයි. මෙම වෙබ් අඩවියෙන් ඔබේ කිසිදු තොරතුරක් එක් රැස් කරනොගන්නා අතර හුදෙක් ඔබව දැනුවත් කිරීමට පමණක් මෙය යොදාගනී."
+        },
         sl_safety: {
             title: "ලංකාවේ සයිබර්",
             titleSpan: "ආරක්ෂක ආයතන",
@@ -136,7 +139,7 @@ const translations = {
             bots: { title: "Bots & Botnets", desc: "Networks of infected computers used for cyber attacks." },
             hijacker: { title: "Browser Hijacker", desc: "Software that modifies web browser settings without permission." },
             hacker: { title: "Hackers", desc: "Individuals who gain unauthorized access to computer systems." },
-            spam: { title: "Spam", desc: "Bulk unwanted, often malicious messages via email or SMS." }
+            spam: { title: "Spam", desc: "Bulk unwanted, often malicious messages sent via email or SMS." }
         },
         attacks: {
             title: "Recent",
@@ -144,6 +147,9 @@ const translations = {
             attack1: { title: "Gov.lk Data Loss (2023)", desc: "Ransomware targets government servers leading to permanent loss of thousands of official emails." },
             attack2: { title: "Banking SMS Phishing (2024)", desc: "A massive wave of SMS fraud targeting major SL banks using fake login URLs." },
             attack3: { title: "WhatsApp Hijacking (Live)", desc: "Thousands of Sri Lankan accounts compromised daily through OTP manipulation." },
+        },
+        mission: {
+            text: "verifiedhub.dpdns.org is an independent site maintained as a public service. Our sole purpose is to protect you from cyber thieves and educate you to prevent falling victim to such scams again. This website does not collect any of your information and is used solely for educational purposes."
         },
         sl_safety: {
             title: "Sri Lanka Security",
@@ -168,10 +174,10 @@ const translations = {
             report: "புகார்"
         },
         hero: {
-            title: "டிජිටල් மோசடிகளில்",
+            title: "ඩිජිටල් மோசடிகளில்",
             titleSpan: "இருந்து பாதுகாப்பாக இருங்கள்",
             subtitle: "இலங்கையில் நடந்த இணைய மோசடிகள், வைரஸ்கள் மற்றும் தரவு திருட்டு பற்றிய முழுமையான தகவல்கள் இங்கே.",
-            btn1: "மோசடிகள்",
+            btn1: "மோசඩிகள்",
             btn2: "பாதுகாப்பு පියවර"
         },
         threatAlert: {
@@ -184,7 +190,7 @@ const translations = {
         scamTypes: {
             title: "டிජිටල්",
             titleSpan: "மோசடிகள்",
-            phishing: { title: "Phishing (போலி தளங்கள்)", desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்." },
+            phishing: { title: "பிஷிங் (Phishing)", desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்." },
             whatsapp: { title: "வாட்ஸ்அப் மோசடி", desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) க்காக பணம் கேட்கும் மோசடிகள்." },
             promo: { title: "போலி விளம்பரங்கள்", desc: "பிரபலமான நிறுவனங்களின் பெயர்களைப் பயன்படுத்தி போலி சலுகைகளை வழங்குகிறார்கள்." },
             dataScam: { title: "இலவச டேட்டா", desc: "இலவச டேட்டா தருவதாகக் கூறி உங்களை ஆபத்தான தளங்களுக்கு அழைத்துச் செல்லும் மோசடி." },
@@ -208,7 +214,10 @@ const translations = {
             titleSpan: "நடந்த தாக்குதல்கள்",
             attack1: { title: "Gov.lk தரவு இழப்பு", desc: "அரசு மின்னஞ்சல் அமைப்பில் ஏற்பட்ட தாக்குதலால் தரவுகள் திருடப்பட்டன." },
             attack2: { title: "வங்கி எஸ்.எம்.எஸ்", desc: "வங்கிப் பெயரில் வரும் போலியான எஸ்.எம்.எஸ் மூலம் பணம் திருடுதல்." },
-            attack3: { title: "வாட்ஸ்அப் හෑක්", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
+            attack3: { title: "வாட்ஸ்அප් හෑක්", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
+        },
+        mission: {
+            text: "verifiedhub.dpdns.org என்பது பொதுச் சேவையாகப் பராமரிக்கப்படும் ஒரு சுயாதீன தளமாகும். சைபர் திருடர்களிடமிருந்து உங்களைப் பாதுகாப்பதும், இதுபோன்ற மோசடிகளுக்கு நீங்கள் மீண்டும் பலியாகாமல் இருக்க உங்களுக்குக் கற்பிப்பதும் எங்களின் ஒரே நோக்கமாகும். இந்த இணையதளம் உங்கள் தகவல்களைச் சேகரிக்காது மற்றும் கல்வி நோக்கங்களுக்காக மட்டுமே பயன்படுத்தப்படுகிறது."
         },
         sl_safety: {
             title: "இலங்கை பாதுகாப்பு",
@@ -219,7 +228,7 @@ const translations = {
             trcsl: "TRCSL - ஒழுங்குமுறை ஆணைக்குழு"
         },
         footer: {
-            desc: "தன்னார்வ சமூக சேவை. உங்கள் பாதுகாப்பு எமது இலக்கு.",
+            desc: "தன்னார்ව சமூக சேவை. உங்கள் பாதுகாப்பு எமது இலக்கு.",
             copyright: "Verified Hub Collective. ஒருவரை ஒருவர் பாதுகாப்போம்."
         }
     }
@@ -227,9 +236,11 @@ const translations = {
 
 export default function Home() {
     const [lang, setLang] = useState(null);
+    const [mounted, setMounted] = useState(false);
     const heroCardRef = useRef(null);
 
     useEffect(() => {
+        setMounted(true);
         const savedLang = localStorage.getItem("user-lang");
         if (savedLang) setLang(savedLang);
     }, []);
@@ -240,20 +251,23 @@ export default function Home() {
     };
 
     useEffect(() => {
+        if (!lang) return;
         const handleMouseMove = (e) => {
             if (!heroCardRef.current) return;
             const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
             const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
             heroCardRef.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
         };
-        if (lang) document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mousemove", handleMouseMove);
         return () => document.removeEventListener("mousemove", handleMouseMove);
     }, [lang]);
+
+    if (!mounted) return null;
 
     if (!lang) {
         return (
             <div className="lang-selector-overlay">
-                <div className="glass-card lang-modal fade-in">
+                <div className="lang-modal fade-in">
                     <div className="shield-icon-container">
                         <Lock size={60} className="glow-icon" />
                     </div>
@@ -285,6 +299,11 @@ export default function Home() {
                 </ul>
             </nav>
 
+            {/* Mobile Lang FAB */}
+            <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn" style={{ padding: '0.8rem 1.2rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+                <Globe size={20} /> {lang.toUpperCase()}
+            </button>
+
             <main suppressHydrationWarning>
                 <section className="hero" id="home">
                     <div className="hero-content">
@@ -298,7 +317,7 @@ export default function Home() {
                     <div className="hero-image fade-in-delay-3">
                         <div className="glass-card main-card" ref={heroCardRef}>
                             <div className="card-header">
-                                <div className="check-icon alert-glow"><ShieldAlert size={32} strokeWidth={2} color="white" /></div>
+                                <div className="alert-glow"><ShieldAlert size={32} strokeWidth={2} color="white" /></div>
                                 <div className="header-text">
                                     <h3>{t.threatAlert.today}</h3>
                                     <p style={{ color: '#ff4d4d' }}>{t.threatAlert.subtitle}</p>
@@ -331,12 +350,21 @@ export default function Home() {
                         <div className="feature-card dark-accent"><Shield size={32} className="gradient-text" /><h4>{t.attacks.attack2.title}</h4><p>{t.attacks.attack2.desc}</p></div>
                         <div className="feature-card dark-accent"><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
                     </div>
+
+                    {/* Mission Statement at bottom of Attacks section */}
+                    <div className="glass-card" style={{ maxWidth: '900px', margin: '4rem auto 0', textAlign: 'center', borderRadius: '40px', border: '1px solid rgba(0, 242, 254, 0.2)' }}>
+                        <UserX size={48} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
+                        <h2 style={{ marginBottom: '1.5rem' }}>{lang === 'si' ? 'අපගේ අරමුණ සහ වගකීම' : 'Our Mission & Responsibility'}</h2>
+                        <p style={{ opacity: 0.95, lineHeight: '1.9', fontSize: '1.1rem', fontWeight: '400' }}>
+                            {t.mission.text}
+                        </p>
+                    </div>
                 </section>
 
                 <section id="malware" className="features" style={{ background: 'rgba(0, 242, 254, 0.03)' }}>
                     <h2 className="section-title">{t.malware.title} <span className="gradient-text">{t.malware.titleSpan}</span></h2>
                     <div className="feature-grid thin">
-                        {Object.entries(t.malware).filter(([key]) => key !== 'title' && key !== 'titleSpan').map(([key, item]) => (
+                        {Object.entries(t.malware).filter(([key]) => !['title', 'titleSpan'].includes(key)).map(([key, item]) => (
                             <div className="feature-card small-pad" key={key}>
                                 <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', marginBottom: '0.5rem' }}>
                                     <Bug size={20} className="gradient-text" /><h4 style={{ margin: 0 }}>{item.title}</h4>
@@ -356,26 +384,6 @@ export default function Home() {
                         <div className="glass-card inst-card"><Globe size={24} className="gradient-text" /><p>{t.sl_safety.trcsl}</p><ExternalLink size={16} className="ext-link" /></div>
                     </div>
                 </section>
-
-                <section className="article-preview">
-                    <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', borderRadius: '40px' }}>
-                        <UserX size={48} className="gradient-text" style={{ marginBottom: '1rem' }} />
-                        <h2>{lang === 'si' ? 'අපගේ අරමුණ' : 'Our Mission'}</h2>
-                        <p style={{ marginTop: '1.5rem', opacity: 0.9, lineHeight: '1.8', fontSize: '1.1rem' }}>
-                            {lang === 'si' ? (
-                                <>
-                                    <strong>verifiedhub.dpdns.org</strong> යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. <br />
-                                    අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීම හා ඔබ නැවත මෙවැනි දේවල් වල හසුනොවීමට දැනුවත් කිරීමයි.
-                                </>
-                            ) : (
-                                <>
-                                    <strong>verifiedhub.dpdns.org</strong> is an independent site maintained as a public service. <br />
-                                    Our sole purpose is to protect you from cyber thieves and educate you to prevent falling victim to such scams again.
-                                </>
-                            )}
-                        </p>
-                    </div>
-                </section>
             </main>
 
             <footer>
@@ -385,49 +393,6 @@ export default function Home() {
                 </div>
                 <p style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '2rem', fontSize: '0.8rem', opacity: 0.6 }}>&copy; 2026 {t.footer.copyright}</p>
             </footer>
-
-            <style jsx global>{`
-        .lang-selector-overlay {
-          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%); 
-          z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px;
-        }
-        .lang-modal {
-          padding: 4rem 2rem; width: 100%; max-width: 600px; border-radius: 40px; 
-          text-align: center; border: 1px solid rgba(255,255,255,0.1); background: rgba(10,10,10,0.8);
-          backdrop-filter: blur(30px); box-shadow: 0 40px 100px rgba(0,0,0,0.8);
-        }
-        .shield-icon-container { margin-bottom: 2rem; }
-        .glow-icon { color: var(--accent-primary); filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5)); }
-        .modal-title { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
-        .modal-desc { fontSize: 0.9rem; opacity: 0.5; marginBottom: 3rem; fontWeight: 300; }
-        .lang-grid-container { 
-          display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem;
-        }
-        .lang-grid-container button.main-l { grid-column: span 2; background: linear-gradient(90deg, #00f2fe, #4facfe); color: black; }
-        .lang-btn { 
-          padding: 1.5rem; border-radius: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer;
-          border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;
-          transition: all 0.3s ease;
-        }
-        .lang-btn:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); border-color: #00f2fe; }
-        .modal-footer-text { font-size: 0.75rem; opacity: 0.3; letter-spacing: 1px; text-transform: uppercase; }
-
-        .alert-glow { background: linear-gradient(135deg, #ff4d4d, #f9cb28); box-shadow: 0 0 20px rgba(255, 77, 77, 0.4); border-radius: 50%; padding: 10px; }
-        .feature-grid.thin { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .dark-accent { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255,255,255,0.05); }
-        .institution-list { display: grid; gap: 1rem; max-width: 800px; margin: 0 auto; }
-        .inst-card { display: flex; align-items: center; gap: 1.5rem; padding: 1.2rem 2.5rem; border-radius: 25px; transition: 0.3s; cursor: pointer; }
-        .inst-card:hover { border-color: var(--accent-primary); transform: translateX(15px); background: rgba(255,255,255,0.05); }
-        .ext-link { margin-left: auto; opacity: 0.3; }
-        
-        @media (max-width: 600px) {
-          .lang-modal { padding: 3rem 1.5rem; border-radius: 30px; }
-          .modal-title { font-size: 1.5rem; }
-          .lang-grid-container { gap: 1rem; }
-          .lang-btn { padding: 1.2rem; font-size: 1rem; }
-        }
-      `}</style>
         </>
     );
 }
