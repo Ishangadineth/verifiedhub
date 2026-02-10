@@ -11,4 +11,4 @@ A modern, premium gateway for digital trust and verification.
 Automated deployment via [Vercel](https://vercel.com).
 
 ## Author
-Created by [Ishangadineth](https://github.com/Ishangadineth) with assistance from AntiGravity AI.
+Created by the Verified Hub Collective with assistance from AntiGravity AI. This is a community-driven initiative focused on digital safety and scam prevention.
