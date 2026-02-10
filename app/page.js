@@ -22,7 +22,9 @@ import {
     Eye,
     Activity,
     History,
-    Shield
+    Shield,
+    Gift,
+    Wifi
 } from "lucide-react";
 
 const translations = {
@@ -54,6 +56,8 @@ const translations = {
             titleSpan: "සහ මංකොල්ල",
             phishing: { title: "Phishing (ව්‍යාජ අඩවි)", desc: "Password සහ බැංකු විස්තර සොරකම් කිරීමට සාදන ලද ව්‍යාජ වෙබ් අඩවි." },
             whatsapp: { title: "WhatsApp වංචා", desc: "හිතවතෙකු මෙන් පෙනී සිටිමින් මුදල් හෝ OTP කේත ඉල්ලා සිටින වංචා." },
+            promo: { title: "ව්‍යාජ ප්‍රවර්ධන", desc: "ප්‍රසිද්ධ සමාගම් වල නම් භාවිතා කර ව්‍යාජ දීමනා හෝ තෑගි ලබාදෙන බව පවසන වංචා." },
+            dataScam: { title: "නිදහස් Mobile Data", desc: "නොමිලේ Data ලබාදෙන බව පවසා ඔබව අනාරක්ෂිත වෙබ් අඩවි වෙත යොමු කරන වංචා." },
             investment: { title: "ආයෝජන වංචා", desc: "මුදල් ද්විගුණ කර දෙන බව පවසන බොරු Crypto සහ Online ආයෝජන වංචා." },
             fakeJobs: { title: "ව්‍යාජ රැකියා", desc: "විදේශ හෝ නිවසේ සිට කරන රැකියා ලබාදෙන බව පවසා මුදල් සොරකම් කිරීම." }
         },
@@ -117,6 +121,8 @@ const translations = {
             titleSpan: "& Fraud",
             phishing: { title: "Phishing Sites", desc: "Fake websites designed to steal passwords and personal credentials." },
             whatsapp: { title: "WhatsApp Scams", desc: "Scammers pretending to be friends asking for money or security codes." },
+            promo: { title: "Fake Brand Promos", desc: "Using famous company names to offer fake gifts, vouchers or prizes." },
+            dataScam: { title: "Free Mobile Data", desc: "Fake sites promising free data packs but directing to malicious sites." },
             investment: { title: "Investment Fraud", desc: "'Get rich quick' crypto schemes and fake investment portals." },
             fakeJobs: { title: "Fake Jobs", desc: "Overseas job offers used to lure people into paying upfront fees." }
         },
@@ -178,9 +184,11 @@ const translations = {
         scamTypes: {
             title: "டிජිටල්",
             titleSpan: "மோசடிகள்",
-            phishing: { title: "பிஷிங் (Phishing)", desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்." },
-            whatsapp: { title: "வாட்ஸ்அப் மோசடி", desc: "நண்பர்கள் போல நடித்து பணம் கேட்கும் மோசடிகள்." },
-            investment: { title: "முதலீட்டு மோசடி", desc: "பணத்தை இரட்டிப்பாக்குவதாகக் கூறி ஏமாற்றும் திட்டங்கள்." },
+            phishing: { title: "Phishing (போலி தளங்கள்)", desc: "உங்கள் கடவுச்சொற்களைத் திருட உருவாக்கப்பட்ட போலியான தளங்கள்." },
+            whatsapp: { title: "வாட்ஸ்அப் மோசடி", desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) க்காக பணம் கேட்கும் மோசடிகள்." },
+            promo: { title: "போலி விளம்பரங்கள்", desc: "பிரபலமான நிறுவனங்களின் பெயர்களைப் பயன்படுத்தி போலி சலுகைகளை வழங்குகிறார்கள்." },
+            dataScam: { title: "இலவச டேட்டா", desc: "இலவச டேட்டா தருவதாகக் கூறி உங்களை ஆபத்தான தளங்களுக்கு அழைத்துச் செல்லும் மோசடி." },
+            investment: { title: "முதலீட்டு மோசடி", desc: "பණத்தை இரட்டிப்பாக்குவதாகக் கூறி ஏமாற்றும் திட்டங்கள்." },
             fakeJobs: { title: "போலி வேலைகள்", desc: "வெளிநாட்டு வேலை எனக் கூறி பணம் பறிக்கும் மோசடிகள்." }
         },
         malware: {
@@ -200,7 +208,7 @@ const translations = {
             titleSpan: "நடந்த தாக்குதல்கள்",
             attack1: { title: "Gov.lk தரவு இழப்பு", desc: "அரசு மின்னஞ்சல் அமைப்பில் ஏற்பட்ட தாக்குதலால் தரவுகள் திருடப்பட்டன." },
             attack2: { title: "வங்கி எஸ்.எம்.எஸ்", desc: "வங்கிப் பெயரில் வரும் போலியான எஸ்.எம்.எஸ் மூலம் பணம் திருடுதல்." },
-            attack3: { title: "வாட்ஸ்அப் ஹேக்கிங்", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
+            attack3: { title: "வாட்ஸ்அப் හෑක්", desc: "ஓடிபி (OTP) மூலம் வாட்ஸ்அப் கணக்குகள் திருடப்படும் நிகழ்வுகள்." },
         },
         sl_safety: {
             title: "இலங்கை பாதுகாப்பு",
@@ -309,6 +317,8 @@ export default function Home() {
                     <div className="feature-grid">
                         <div className="feature-card"><div className="icon-box"><Search className="gradient-text" size={40} /></div><h3>{t.scamTypes.phishing.title}</h3><p>{t.scamTypes.phishing.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p></div>
+                        <div className="feature-card"><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p></div>
+                        <div className="feature-card"><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p></div>
                     </div>
@@ -351,8 +361,18 @@ export default function Home() {
                     <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', borderRadius: '40px' }}>
                         <UserX size={48} className="gradient-text" style={{ marginBottom: '1rem' }} />
                         <h2>{lang === 'si' ? 'අපගේ අරමුණ' : 'Our Mission'}</h2>
-                        <p style={{ marginTop: '1rem', opacity: 0.8 }}>
-                            {lang === 'si' ? 'verifiedhub.dpdns.org යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීමයි.' : 'Verified Hub is an independent mission for public safety. Our soul purpose is to safeguard you from cyber predators.'}
+                        <p style={{ marginTop: '1.5rem', opacity: 0.9, lineHeight: '1.8', fontSize: '1.1rem' }}>
+                            {lang === 'si' ? (
+                                <>
+                                    <strong>verifiedhub.dpdns.org</strong> යනු මහජන සේවයක් ලෙස පවත්වාගෙන යන ස්වාධීන අඩවියකි. <br />
+                                    අපගේ එකම අරමුණ ඔබව සයිබර් සොරුන්ගෙන් ආරක්ෂා කිරීම හා ඔබ නැවත මෙවැනි දේවල් වල හසුනොවීමට දැනුවත් කිරීමයි.
+                                </>
+                            ) : (
+                                <>
+                                    <strong>verifiedhub.dpdns.org</strong> is an independent site maintained as a public service. <br />
+                                    Our sole purpose is to protect you from cyber thieves and educate you to prevent falling victim to such scams again.
+                                </>
+                            )}
                         </p>
                     </div>
                 </section>
@@ -363,7 +383,7 @@ export default function Home() {
                     <div style={{ flex: 1, minWidth: '200px' }}><h3 className="logo"><span className="gradient-text">Verified</span>Hub</h3><p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>{t.footer.desc}</p></div>
                     <div style={{ flex: 1, minWidth: '150px' }}><h4>Security Awareness</h4><ul style={{ listStyle: 'none', marginTop: '1rem', color: 'var(--text-secondary)', lineHeight: '2' }}><li>Public Warning</li><li>Report Scam</li><li>SL Cyber Safety</li></ul></div>
                 </div>
-                <p style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '2rem', fontSize: '0.8rem', opacity: 0.6 }}>&copy; 2024 {t.footer.copyright}</p>
+                <p style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '2rem', fontSize: '0.8rem', opacity: 0.6 }}>&copy; 2026 {t.footer.copyright}</p>
             </footer>
 
             <style jsx global>{`
