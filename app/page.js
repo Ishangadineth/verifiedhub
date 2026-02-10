@@ -435,8 +435,16 @@ export default function Home() {
             <style jsx>{`
         .mobile-toggle { display: none; cursor: pointer; color: white; }
         .institution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
-        .mission-container { max-width: 900px; margin: 6rem auto 0; padding: 0 1rem; }
-        .mission-box { textAlign: center; borderRadius: 40px; border: 1px solid rgba(0, 242, 254, 0.2); padding: 3rem 2rem; background: rgba(5,5,5,0.4); backdrop-filter: blur(10px); }
+        .mission-container { max-width: 900px; margin: 6rem auto 0; padding: 0 1rem; width: 100%; }
+        .mission-box { 
+          text-align: center; 
+          border-radius: 40px; 
+          border: 1px solid rgba(0, 242, 254, 0.3); 
+          padding: 4rem 2rem; 
+          background: rgba(5,5,5,0.6); 
+          backdrop-filter: blur(20px);
+          max-width: none; 
+        }
         
         @media (max-width: 968px) {
             .mobile-toggle { display: block; z-index: 1001; }
