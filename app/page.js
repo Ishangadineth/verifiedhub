@@ -26,7 +26,9 @@ import {
     Gift,
     Wifi,
     Menu,
-    X
+    X,
+    Terminal,
+    Download
 } from "lucide-react";
 
 const translations = {
@@ -60,6 +62,8 @@ const translations = {
             whatsapp: { title: "WhatsApp වංචා", desc: "හිතවතෙකු මෙන් පෙනී සිටිමින් මුදල් හෝ OTP කේත ඉල්ලා සිටින වංචා." },
             promo: { title: "ව්‍යාජ ප්‍රවර්ධන", desc: "ප්‍රසිද්ධ සමාගම් වල නම් භාවිතා කර ව්‍යාජ දීමනා හෝ තෑගි ලබාදෙන බව පවසන වංචා." },
             dataScam: { title: "නිදහස් Mobile Data", desc: "නොමිලේ Data ලබාදෙන බව පවසා ඔබව අනාරක්ෂිත වෙබ් අඩවි වෙත යොමු කරන වංචා." },
+            malwareSoftware: { title: "ආසාදිත මෘදුකාංග", desc: "විවිධ පහසුකම් ලබාදෙන බව පවසා ඔබගේ දුරකථනයට හෝ පරිගණකයට Malware ඇතුල් කරන මෘදුකාංග." },
+            hacking: { title: "Hacking (පද්ධති හැක් කිරීම)", desc: "ඔබගේ පෞද්ගලික ගිණුම් හෝ පද්ධති වලට අවසරයකින් තොරව ඇතුල් වී දත්ත සොරකම් කිරීම." },
             investment: { title: "ආයෝජන වංචා", desc: "මුදල් ද්විගුණ කර දෙන බව පවසන බොරු Crypto සහ Online ආයෝජන වංචා." },
             fakeJobs: { title: "ව්‍යාජ රැකියා", desc: "විදේශ හෝ නිවසේ සිට කරන රැකියා ලබාදෙන බව පවසා මුදල් සොරකම් කිරීම." }
         },
@@ -129,6 +133,8 @@ const translations = {
             whatsapp: { title: "WhatsApp Scams", desc: "Scammers pretending to be friends asking for money or security codes." },
             promo: { title: "Fake Brand Promos", desc: "Using famous company names to offer fake gifts, vouchers or prizes." },
             dataScam: { title: "Free Mobile Data", desc: "Fake sites promising free data packs but directing to malicious sites." },
+            malwareSoftware: { title: "Infected Software", desc: "Software or apps that bypass security to install malware onto your device." },
+            hacking: { title: "Hacking & Intrusions", desc: "Unauthorized access to your private accounts or systems to steal sensitive data." },
             investment: { title: "Investment Fraud", desc: "'Get rich quick' crypto schemes and fake investment portals." },
             fakeJobs: { title: "Fake Jobs", desc: "Overseas job offers used to lure people into paying upfront fees." }
         },
@@ -198,6 +204,8 @@ const translations = {
             whatsapp: { title: "வாட்ஸ்அப் மோசடி", desc: "நண்பர்கள் போல நடித்து ஓடிபி (OTP) க்காக பணம் கேட்கும் மோசடிகள்." },
             promo: { title: "போலி விளம்பரங்கள்", desc: "பிரபலமான நிறுவனங்களின் பெயர்களைப் பயன்படுத்தி போலி சலுகைகளை வழங்குகிறார்கள்." },
             dataScam: { title: "இலவச டேட்டா", desc: "இலவச டேட்டா தருவதாகக் கூறி உங்களை ஆபத்தான தளங்களுக்கு அழைத்துச் செல்லும் மோசடி." },
+            malwareSoftware: { title: "பாதிக்கப்பட்ட மென்பொருள்", desc: "உங்கள் சாதனத்தில் மால்வேரை நிறுவும் மென்பொருள் அல்லது பயன்பாடுகள்." },
+            hacking: { title: "ஹேக்கிங் (Hacking)", desc: "உங்கள் தனிப்பட்ட கணக்குகள் அல்லது அமைப்புகளை அனுமதியின்றி அணுகுதல்." },
             investment: { title: "முதலீட்டு மோசடி", desc: "பණத்தை இரட்டிப்பாக்குவதாகக் கூறி ஏமாற்றும் திட்டங்கள்." },
             fakeJobs: { title: "போலி வேலைகள்", desc: "வெளிநாட்டு வேலை எனக் கூறி பணம் பறிக்கும் மோசடிகள்." }
         },
@@ -205,13 +213,13 @@ const translations = {
             title: "மால்வேர்",
             titleSpan: "விளக்கம்",
             virus: { title: "கணினி வைரஸ்", desc: "கணினியைப் பாதிக்கும் தீங்கிழைக்கும் குறியீடுகள்." },
-            worms: { title: "வோர்ම්ஸ் (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவும் வைரஸ்கள்." },
+            worms: { title: "வோர்ම්ස් (Worms)", desc: "வலைப்பின்னல்கள் மூலம் தானாகப் பரவும் வைரஸ்கள்." },
             spyware: { title: "ஸ்பைவேர்", desc: "உங்கள் தகவல்களைத் திருடும் மென்பொருள்." },
             adware: { title: "அட்வேர்", desc: "தேவையற்ற விளம்பரங்களைக் காட்டும் மென்பொருள்." },
             bots: { title: "பாட்கள் (Bots)", desc: "தாக்குதல்களை நடத்தப் பயன்படுத்தப்படும் கணினிகள்." },
             hijacker: { title: "உலவி கடத்தல்", desc: "உலவி அமைப்புகளை மாற்றும் மென்பொருள்." },
             hacker: { title: "ஹேக்கர்கள்", desc: "அனுமதியின்றி கணினிக்குள் நுழையும் நபர்கள்." },
-            spam: { title: "ஸ்பேம் (Spam)", desc: "பெருமளவில் வரும் தேவையற்ற செய்திகள்." }
+            spam: { title: "ஸ்பேම් (Spam)", desc: "பெருமளவில் வரும் தேவையற்ற செய்திகள்." }
         },
         attacks: {
             title: "இலங்கையில்",
@@ -293,29 +301,22 @@ export default function Home() {
 
     const t = translations[lang];
 
-    const closeMenu = () => setIsMenuOpen(false);
-
     return (
         <>
             <nav suppressHydrationWarning>
                 <div className="logo"><span className="gradient-text">Verified</span><span>Hub</span></div>
-
-                {/* Desktop Nav */}
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    <li><a href="#home" onClick={closeMenu}>{t.nav.home}</a></li>
-                    <li><a href="#scams" onClick={closeMenu}>{t.nav.scams}</a></li>
-                    <li><a href="#institutions" onClick={closeMenu}>{t.nav.sl_safety}</a></li>
-                    <li><a href="#attacks" onClick={closeMenu}>{t.nav.attacks}</a></li>
-                    <li><button onClick={() => selectLanguage(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
+                    <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</a></li>
+                    <li><a href="#scams" onClick={() => setIsMenuOpen(false)}>{t.nav.scams}</a></li>
+                    <li><a href="#institutions" onClick={() => setIsMenuOpen(false)}>{t.nav.sl_safety}</a></li>
+                    <li><a href="#attacks" onClick={() => setIsMenuOpen(false)}>{t.nav.attacks}</a></li>
+                    <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
                 </ul>
-
-                {/* Mobile Toggle */}
                 <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </div>
             </nav>
 
-            {/* Mobile Lang FAB (Hidden when menu open) */}
             {!isMenuOpen && (
                 <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn">
                     <Globe size={20} /> {lang.toUpperCase()}
@@ -362,6 +363,8 @@ export default function Home() {
                         <div className="feature-card"><div className="icon-box"><MessageCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.whatsapp.title}</h3><p>{t.scamTypes.whatsapp.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><Gift className="gradient-text" size={40} /></div><h3>{t.scamTypes.promo.title}</h3><p>{t.scamTypes.promo.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><Wifi className="gradient-text" size={40} /></div><h3>{t.scamTypes.dataScam.title}</h3><p>{t.scamTypes.dataScam.desc}</p></div>
+                        <div className="feature-card"><div className="icon-box"><Download className="gradient-text" size={40} /></div><h3>{t.scamTypes.malwareSoftware.title}</h3><p>{t.scamTypes.malwareSoftware.desc}</p></div>
+                        <div className="feature-card"><div className="icon-box"><Terminal className="gradient-text" size={40} /></div><h3>{t.scamTypes.hacking.title}</h3><p>{t.scamTypes.hacking.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><TrendingUp className="gradient-text" size={40} /></div><h3>{t.scamTypes.investment.title}</h3><p>{t.scamTypes.investment.desc}</p></div>
                         <div className="feature-card"><div className="icon-box"><AlertCircle className="gradient-text" size={40} /></div><h3>{t.scamTypes.fakeJobs.title}</h3><p>{t.scamTypes.fakeJobs.desc}</p></div>
                     </div>
@@ -381,10 +384,9 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Institutions Section - Moved UP */}
                 <section id="institutions" className="features">
                     <h2 className="section-title">{t.sl_safety.title} <span className="gradient-text">{t.sl_safety.titleSpan}</span></h2>
-                    <div className="institution-list">
+                    <div className="institution-grid">
                         <div className="glass-card inst-card"><ShieldHalf size={24} className="gradient-text" /><p>{t.sl_safety.cert}</p><ExternalLink size={16} className="ext-link" /></div>
                         <div className="glass-card inst-card"><Cpu size={24} className="gradient-text" /><p>{t.sl_safety.icta}</p><ExternalLink size={16} className="ext-link" /></div>
                         <div className="glass-card inst-card"><Activity size={24} className="gradient-text" /><p>{t.sl_safety.slp}</p><ExternalLink size={16} className="ext-link" /></div>
@@ -392,7 +394,6 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Attacks Section - Moved AFTER Institutions */}
                 <section id="attacks" className="features" style={{ background: 'rgba(255, 77, 77, 0.04)', paddingBottom: '8rem' }}>
                     <h2 className="section-title">{t.attacks.title} <span className="gradient-text" style={{ background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.attacks.titleSpan}</span></h2>
                     <div className="feature-grid thin">
@@ -401,16 +402,16 @@ export default function Home() {
                         <div className="feature-card dark-accent"><AlertTriangle size={32} className="gradient-text" /><h4>{t.attacks.attack3.title}</h4><p>{t.attacks.attack3.desc}</p></div>
                     </div>
 
-                    {/* Mission Statement at long bottom of everything, now inside/after Attacks section */}
-                    <div className="glass-card mission-box fade-in-delay-3" style={{ maxWidth: '900px', margin: '6rem auto 0', textAlign: 'center', borderRadius: '40px', border: '1px solid rgba(0, 242, 254, 0.2)', padding: '3rem 2rem' }}>
-                        <UserX size={54} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
-                        <h2 style={{ marginBottom: '1.5rem' }}>{t.mission.title}</h2>
-                        <p style={{ opacity: 0.95, lineHeight: '2', fontSize: '1.15rem', fontWeight: '400' }}>
-                            {t.mission.text}
-                        </p>
+                    <div className="mission-container">
+                        <div className="glass-card mission-box fade-in-delay-3">
+                            <UserX size={54} className="gradient-text" style={{ marginBottom: '1.5rem' }} />
+                            <h2 style={{ marginBottom: '1.5rem' }}>{t.mission.title}</h2>
+                            <p style={{ opacity: 0.95, lineHeight: '2', fontSize: '1.15rem', fontWeight: '400' }}>
+                                {t.mission.text}
+                            </p>
+                        </div>
                     </div>
                 </section>
-
             </main>
 
             <footer>
@@ -433,21 +434,24 @@ export default function Home() {
 
             <style jsx>{`
         .mobile-toggle { display: none; cursor: pointer; color: white; }
+        .institution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .mission-container { max-width: 900px; margin: 6rem auto 0; padding: 0 1rem; }
+        .mission-box { textAlign: center; borderRadius: 40px; border: 1px solid rgba(0, 242, 254, 0.2); padding: 3rem 2rem; background: rgba(5,5,5,0.4); backdrop-filter: blur(10px); }
         
         @media (max-width: 968px) {
             .mobile-toggle { display: block; z-index: 1001; }
             .nav-links {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-                background: #000; flex-direction: column; justify-content: center;
+                background: #000; flex-direction: column; justify-content: center; align-items: center;
                 transform: translateX(100%); transition: 0.4s ease;
+                gap: 2rem;
             }
             .nav-links.active { transform: translateX(0); }
-            .hero { padding-top: 2rem; }
-            h1 { font-size: 2.5rem; }
-            .feature-grid { grid-template-columns: 1fr; }
+            .hero { padding: 4rem 5%; flex-direction: column; text-align: center; }
+            h1 { font-size: 2.8rem; }
+            .hero-image { justify-content: center; width: 100%; }
         }
 
-        .mission-box { background: rgba(5,5,5,0.4); backdrop-filter: blur(10px); }
         .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; text-align: left; margin-bottom: 4rem; padding: 0 10%; }
         .footer-info { flex: 1; min-width: 200px; }
         .footer-nav { flex: 1; min-width: 150px; }
