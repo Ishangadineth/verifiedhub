@@ -37,13 +37,13 @@ export default function RootLayout({ children }) {
                 <Script src="https://pl28693610.effectivegatecpm.com/cc/e9/8c/cce98c666fbff7eeba175d67f239e387.js" strategy="afterInteractive" />
 
                 {/* Google Analytics */}
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-EBVRYRKJJW" strategy="afterInteractive" />
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-EBVBYRKJJW" strategy="afterInteractive" />
                 <Script id="google-analytics" strategy="afterInteractive">
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-                        gtag('config', 'G-EBVRYRKJJW');
+                        gtag('config', 'G-EBVBYRKJJW');
                     `}
                 </Script>
             </head>
