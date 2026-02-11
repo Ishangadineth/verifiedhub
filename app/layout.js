@@ -17,9 +17,9 @@ export const metadata = {
         siteName: "Verified Hub",
         images: [
             {
-                url: "https://cdn-icons-png.flaticon.com/512/7594/7594918.png", // A more professional security/shield logo
-                width: 512,
-                height: 512,
+                url: "/og-image.png", // Using the custom T20 promo banner
+                width: 1200,
+                height: 630,
             },
         ],
         locale: "en_LK",
@@ -37,13 +37,13 @@ export default function RootLayout({ children }) {
                 <Script src="https://pl28693610.effectivegatecpm.com/cc/e9/8c/cce98c666fbff7eeba175d67f239e387.js" strategy="afterInteractive" />
 
                 {/* Google Analytics */}
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID-HERE" strategy="afterInteractive" />
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-EBVRYRKJJW" strategy="afterInteractive" />
                 <Script id="google-analytics" strategy="afterInteractive">
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
-                        gtag('config', 'G-YOUR-ID-HERE');
+                        gtag('config', 'G-EBVRYRKJJW');
                     `}
                 </Script>
             </head>
