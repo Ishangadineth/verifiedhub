@@ -10,6 +10,21 @@ const outfit = Outfit({
 export const metadata = {
     title: "Verified Hub | The Ultimate Trust Gateway",
     description: "Verified Hub is your premier destination for authentic connections and verified resources.",
+    openGraph: {
+        title: "Verified Hub | The Ultimate Trust Gateway",
+        description: "Verified Hub is your premier destination for authentic connections and verified resources.",
+        url: "https://verifiedhub.dpdns.org",
+        siteName: "Verified Hub",
+        images: [
+            {
+                url: "https://img.freepik.com/free-vector/verified-concept-illustration_114360-5120.jpg",
+                width: 800,
+                height: 800,
+            },
+        ],
+        locale: "en_LK",
+        type: "website",
+    },
 };
 
 export default function RootLayout({ children }) {

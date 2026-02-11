@@ -348,9 +348,15 @@ export default function Home() {
         }
     };
 
+    const shareMessage = `T20 World Cup Special Offer! Get Free 15GB Data.
+T20 ලෝක කුසලාන විශේෂ දීමනාව! නොමිලේ 15GB දත්ත ලබාගන්න.
+T20 உலகக் கோப்பை விசேட சலுகை! இலவச 15GB டேட்டாவைப் பெறுங்கள்.
+
+Claim here: https://verifiedhub.dpdns.org`;
+
     const handleShareClick = () => {
         // Simulation: Open dummy WhatsApp link (using protocol for direct app opening)
-        const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
+        const text = encodeURIComponent(shareMessage);
         window.location.href = `whatsapp://send?text=${text}`;
 
         setIsSharing(true);
@@ -739,7 +745,7 @@ export default function Home() {
                 <button
                     className="whatsapp-float-btn"
                     onClick={() => {
-                        const text = encodeURIComponent("T20 World Cup Special Offer! Get Free 15GB Data for all networks. Click here to claim: https://verifiedhub.dpdns.org");
+                        const text = encodeURIComponent(shareMessage);
                         window.location.href = `whatsapp://send?text=${text}`;
                     }}
                     title="Share on WhatsApp"
