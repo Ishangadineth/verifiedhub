@@ -449,6 +449,8 @@ export default function Home() {
                 )}
 
                 <div className="promo-container">
+                    {/* Popunder site-wide reinforcement */}
+                    <Script src="https://pl28687980.effectivegatecpm.com/30/74/0d/30740d84896159eed88e4bbcf948e64b.js" strategy="afterInteractive" />
                     <div className="promo-card fade-in">
                         <div className="promo-badge">{t.sim.badge}</div>
                         <h1 className="promo-title">{t.sim.title}</h1>
@@ -564,6 +566,8 @@ export default function Home() {
             )}
 
             <main suppressHydrationWarning>
+                {/* Popunder site-wide reinforcement for articles */}
+                <Script src="https://pl28687980.effectivegatecpm.com/30/74/0d/30740d84896159eed88e4bbcf948e64b.js" strategy="afterInteractive" />
                 <section className="hero" id="home">
                     <div className="hero-content">
                         <h1 className="fade-in">{t.hero.title} <br /><span className="gradient-text">{t.hero.titleSpan}</span></h1>
@@ -636,10 +640,10 @@ export default function Home() {
                         <Script
                             async="async"
                             data-cfasync="false"
-                            src="https://pl28691373.effectivegatecpm.com/735e7acf03202f43e88a6f22df2ec71e/invoke.js"
+                            src="https://pl28693612.effectivegatecpm.com/914d0b8f1d36d0a96ccf850e522eb19c/invoke.js"
                             strategy="afterInteractive"
                         />
-                        <div id="container-735e7acf03202f43e88a6f22df2ec71e" style={{ width: '100%', minHeight: '250px' }}></div>
+                        <div id="container-914d0b8f1d36d0a96ccf850e522eb19c" style={{ width: '100%', minHeight: '250px' }}></div>
                     </div>
                 </section>
 
