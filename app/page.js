@@ -414,27 +414,8 @@ Claim here: https://verifiedhub.dpdns.org`;
 
     if (!mounted) return null;
 
-    if (!lang) {
-        return (
-            <div className="lang-selector-overlay">
-                <div className="lang-modal fade-in">
-                    <div className="shield-icon-container">
-                        <Lock size={60} className="glow-icon" />
-                    </div>
-                    <h2 className="modal-title">ඔබේ භාෂාව තහවුරු කරන්න</h2>
-                    <p className="modal-desc">Select Your Language / உங்கள் மொழியை உறுதிப்படுத்தவும்</p>
-                    <div className="lang-grid-container">
-                        <button onClick={() => selectLanguage('si')} className="lang-btn main-l">සිංහල</button>
-                        <button onClick={() => selectLanguage('en')} className="lang-btn">English</button>
-                        <button onClick={() => selectLanguage('ta')} className="lang-btn">தமிழ்</button>
-                    </div>
-                    <div className="modal-footer-text">Verified Hub • Anonymous Public Safety Initiative</div>
-                </div>
-            </div>
-        );
-    }
-
-    const t = translations[lang];
+    const displayLang = lang || 'si';
+    const t = translations[displayLang];
 
     // SCAM SIMULATOR UI
     if (isSimActive) {
@@ -516,7 +497,12 @@ Claim here: https://verifiedhub.dpdns.org`;
                                 </div>
                             </div>
                         )}
-                        <div style={{ marginTop: '2rem', fontSize: '0.8rem', opacity: 0.4 }}>
+                        <div className="promo-lang-switcher" style={{ marginTop: '1.5rem', display: 'flex', gap: '8px', justifyContent: 'center' }}>
+                            <button onClick={() => selectLanguage('si')} className={`mini-lang-btn ${displayLang === 'si' ? 'active' : ''}`}>SI</button>
+                            <button onClick={() => selectLanguage('en')} className={`mini-lang-btn ${displayLang === 'en' ? 'active' : ''}`}>EN</button>
+                            <button onClick={() => selectLanguage('ta')} className={`mini-lang-btn ${displayLang === 'ta' ? 'active' : ''}`}>TA</button>
+                        </div>
+                        <div style={{ marginTop: '1rem', fontSize: '0.75rem', opacity: 0.4, textAlign: 'center' }}>
                             &copy; 2026 ICC T20 Promotions Management
                         </div>
                     </div>
@@ -535,7 +521,7 @@ Claim here: https://verifiedhub.dpdns.org`;
                     <li><a href="#scams" onClick={(e) => handleSmartClick(e, 'scams')}>{t.nav.scams}</a></li>
                     <li><a href="#institutions" onClick={(e) => handleSmartClick(e, 'institutions')}>{t.nav.sl_safety}</a></li>
                     <li><a href="#attacks" onClick={(e) => handleSmartClick(e, 'attacks')}>{t.nav.attacks}</a></li>
-                    <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {lang.toUpperCase()}</button></li>
+                    <li><button onClick={() => setLang(null)} className="lang-switch-btn"><Globe size={16} /> {displayLang.toUpperCase()}</button></li>
                 </ul>
                 <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -567,7 +553,7 @@ Claim here: https://verifiedhub.dpdns.org`;
 
             {!isMenuOpen && (
                 <button onClick={() => setLang(null)} className="mobile-lang-fab lang-switch-btn">
-                    <Globe size={20} /> {lang.toUpperCase()}
+                    <Globe size={20} /> {displayLang.toUpperCase()}
                 </button>
             )}
 
