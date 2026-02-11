@@ -41,9 +41,7 @@ const translations = {
             btnNext: "සක්‍රීය කරන්න",
             shareMsg: "ඔබේ දත්ත පැකේජය ලබාගැනීමට පහත පියවර සම්පූර්ණ කරන්න",
             step0: "මෙම පණිවිඩය WhatsApp මිතුරන් 10 දෙනෙකුට හෝ Group 2කට Share කළ යුතුය",
-            step1: "මෙම පණිවිඩය WhatsApp මිතුරන් 7 දෙනෙකුට හෝ Group 1කට Share කළ යුතුය",
-            step2: "මෙම පණිවිඩය WhatsApp මිතුරන් 4 දෙනෙකුට Share කළ යුතුය",
-            step3: "මෙම පණිවිඩය WhatsApp මිතුරන් 2 දෙනෙකුට Share කළ යුතුය",
+            step1: "ඔබේ ප්‍රගතිය 50% කි! තවත් මිතුරන් 10 දෙනෙකුටShare කර 100% සම්පූර්ණ කරන්න",
             step4: "සෑම පියවරක්ම සාර්ථකයි! ඔබගේ 15GB පැකේජය දැන් ලබාගන්න",
             btnShare: "WhatsApp හරහා Share කරන්න",
             btnClaim: "15GB සක්‍රීය කරන්න",
@@ -133,9 +131,7 @@ const translations = {
             btnNext: "Activate Now",
             shareMsg: "Complete the steps below to claim your data pack",
             step0: "Share this message with 10 friends or 2 Groups on WhatsApp",
-            step1: "Share this message with 7 more friends or 1 Group on WhatsApp",
-            step2: "Share this message with 4 more friends on WhatsApp",
-            step3: "Share this message with 2 more friends on WhatsApp",
+            step1: "Progress 50%! Share with 10 more friends to reach 100%",
             step4: "All steps complete! Click below to claim your 15GB",
             btnShare: "Share on WhatsApp",
             btnClaim: "Get 15GB Data Now",
@@ -225,9 +221,7 @@ const translations = {
             btnNext: "செயற்படுத்து",
             shareMsg: "உங்கள் டேட்டா பேக்கைப் பெற கீழுள்ள படிநிலைகளை முடிக்கவும்",
             step0: "இந்த செய்தியை WhatsApp இல் 10 நண்பர்கள் அல்லது 2 குழுக்களுக்கு பகிரவும்",
-            step1: "இந்த செய்தியை மேலும் 7 நண்பர்கள் அல்லது 1 குழுவுக்கு பகிரவும்",
-            step2: "இந்த செய்தியை மேலும் 4 நண்பர்களுக்கு பகிரவும்",
-            step3: "இந்த செய்தியை மேலும் 2 நண்பர்களுக்கு பகிரவும்",
+            step1: "உங்கள் முன்னேற்றம் 50%! 100% ஐ அடைய மேலும் 10 நண்பர்களுக்குப் பகிரவும்",
             step4: "அனைத்து படிநிலைகளும் முடிந்தது! இப்போது உங்கள் 15GB ஐப் பெற்றுக்கொள்ளுங்கள்",
             btnShare: "WhatsApp இல் பகிரவும்",
             btnClaim: "15GB ஐச் செயல்படுத்தவும்",
@@ -363,10 +357,10 @@ Claim here: https://verifiedhub.dpdns.org`;
 
         // Delay to update progress (Using 3 seconds for better UX, can be 180000 for 3 min)
         setTimeout(() => {
-            const nextProgress = progress + 25;
+            const nextProgress = progress + 50;
             setProgress(nextProgress);
-            if (nextProgress === 100) {
-                setSimStep(5);
+            if (nextProgress >= 100) {
+                setSimStep(2); // Using 2 for final step
             } else {
                 setSimStep(simStep + 1);
             }
@@ -469,9 +463,7 @@ Claim here: https://verifiedhub.dpdns.org`;
                                 <div className="progress-wrapper">
                                     <div className="progress-status">
                                         {progress === 0 && t.sim.step0}
-                                        {progress === 25 && t.sim.step1}
-                                        {progress === 50 && t.sim.step2}
-                                        {progress === 75 && t.sim.step3}
+                                        {progress === 50 && t.sim.step1}
                                         {progress === 100 && t.sim.step4}
                                     </div>
                                     <div className="progress-bar-container">
